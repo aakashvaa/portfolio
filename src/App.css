@@ -1,11 +1,49 @@
 html,
 body {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-.anim {
   width: 100vw;
   height: 100vh;
-  background-color: black;
+  overflow: hidden;
+}
+
+main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  color: #ffc017;
+  background: linear-gradient(
+    to right,
+    #000000,
+  #000110,
+    #000000
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.maincontainer {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  width: 85vw;
+  height: 85vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-left: 3rem;
+  border-radius: 20px;
+  box-shadow: 1px 5 10px 10px solid rgba(9, 9, 9, 0.801);
+  background-color: #131314a3;
+  backdrop-filter: blur(1px);
+  padding: 1rem;
 }
