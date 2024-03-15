@@ -3,15 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "framer-motion": "^11.0.6",
+    "framer-motion": "^11.0.8",
     "react": "^18",
     "react-dom": "^18",
     "react-router-dom": "^6.22.0",
     "react-scripts": "^5.0.1",
     "react-three-fiber": "^5.3.22",
+    "tailwindcss": "^3.4.1",
     "three": "^0.126.1",
     "twin.macro": "^3.4.1",
     "web-vitals": "^1.0.1"
@@ -20,7 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "ghp": "chmod +x script.sh && ./script.sh $@"
   },
   "eslintConfig": {
     "extends": [
