@@ -25,8 +25,8 @@ function CameraControls() {
     <orbitControls
       ref={controlsRef}
       args={[camera, domElement]}
-      autoRotate
-      autoRotateSpeed={-0.15}
+      autoRotate={false}
+      
       enableZoom={false}
     />
   )
