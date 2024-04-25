@@ -26,7 +26,6 @@ function CameraControls() {
       ref={controlsRef}
       args={[camera, domElement]}
       autoRotate={false}
-      
       enableZoom={false}
     />
   )
@@ -105,7 +104,7 @@ function Points() {
       <pointsMaterial
         attach="material"
         map={imgTex}
-        color={0xffffff}
+        color={0xf3f3fe}
         size={0.6}
         sizeAttenuation
         transparent={true}

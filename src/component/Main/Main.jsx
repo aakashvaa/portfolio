@@ -1,9 +1,26 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
+import Intro from '../Intro'
+
+import { motion } from 'framer-motion'
+import About from '../About'
+
 export default function Main() {
   return (
-    <div className="w-full  ">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: {
+          duration: 1,
+          ease: 'easeIn',
+        },
+      }}
+      className="w-full items-center mt-[7rem] gap-36 flex flex-col  "
+    >
       <Navbar />
-    </div>
+      <Intro />
+      <About />
+    </motion.div>
   )
 }

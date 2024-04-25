@@ -2,13 +2,12 @@ import './App.css'
 import AnimationCanvas from './component/AnimationCanvas'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import AnimationLogo from './AnimationLogo/AnimationLogo.jsx'
-import Main from './component/Main/Main.jsx'
 import { motion } from 'framer-motion'
 import { Suspense } from 'react'
 
 function HeroContainer() {
   return (
-    <motion.div>
+    <motion.div className="main">
       <div className="animation absolute">
         <Suspense fallback={<div>Loading...</div>}>
           <AnimationCanvas />
@@ -27,7 +26,6 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route index element={<HeroContainer />} />
-        <Route path="/about" element={<Main />} />
       </Routes>
     </BrowserRouter>
   )
