@@ -14,7 +14,7 @@ function HeroContainer() {
         </Suspense>
       </div>
 
-      <div className="h-screen  w-full" style={{ zIndex: 100 }}>
+      <div className="h-screen w-full" style={{ zIndex: 100 }}>
         <AnimationLogo />
       </div>
     </motion.div>

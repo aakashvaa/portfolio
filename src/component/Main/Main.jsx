@@ -1,13 +1,15 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import Navbar from '../Navbar/Navbar'
 import Intro from '../Intro'
 
-import { motion } from 'framer-motion'
 import About from '../About'
+import Project from '../Project/Project'
 
 export default function Main() {
   return (
-    <motion.div
+    <motion.section
+      id="top"
       initial={{ opacity: 0 }}
       animate={{
         opacity: 1,
@@ -16,11 +18,12 @@ export default function Main() {
           ease: 'easeIn',
         },
       }}
-      className="w-full items-center mt-[7rem] gap-36 flex flex-col  "
+      className="w-full items-center  border-2 pt-14 sm:pt-[9rem] pb-[7rem] flex flex-col  "
     >
       <Navbar />
       <Intro />
       <About />
-    </motion.div>
+      <Project />
+    </motion.section>
   )
 }

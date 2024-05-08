@@ -3,12 +3,14 @@ import { motion } from 'framer-motion'
 import { pathVariants, svgVariants } from '../utils/constant'
 function Logo() {
   return (
-    <div className="absolute right-10 cursor-pointer ">
+    <a
+      href="#top"
+      className="absolute right-10 cursor-pointer decoration-transparent "
+    >
       <motion.svg
         width="30"
         height="20"
         viewBox="0 0 85 97"
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
         style={{ width: '100%', transformOrigin: '0%' }}
         variants={svgVariants}
@@ -27,7 +29,7 @@ function Logo() {
           fill="#ffffff"
         />
       </motion.svg>
-    </div>
+    </a>
   )
 }
 
