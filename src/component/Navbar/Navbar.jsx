@@ -8,19 +8,19 @@ import hashnode from '../../assets/hashnode.svg'
 import Logo from '../Logo.jsx'
 
 import { ATag, NavStyle } from './navbar.styles'
+import MobileNavbar from '../MobileNav/MobileNavbar.jsx'
 
 function Navbar() {
   return (
     <>
       <NavStyle>
         <Logo />
-
         <div className="flex font-light fixed z-50 top-5 gap-x-10 justify-center items-center backdrop-blur-md px-10 py-3 rounded-3xl">
           <ATag href="#skills">Skills </ATag>
           <ATag href="#about">About</ATag>
           <ATag href="#project">Project</ATag>
           <ATag href="#contact">Contact</ATag>
-          <h1>|</h1>
+          <div>|</div>
           <a
             href="https://github.com/akaashvaa"
             target="_blank"
@@ -71,9 +71,7 @@ function Navbar() {
           </a>
         </div>
       </NavStyle>
-      <div className="sm:hidden w-[100%] flex fixed top-10 px-14 items-end justify-end   backdrop-blur-md">
-        <Logo />
-      </div>
+      <MobileNavbar />
     </>
   )
 }

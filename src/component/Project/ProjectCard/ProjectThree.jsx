@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import project1 from '../../../assets/project1.png'
-import ShowDeatils from './ShowDeatils'
 function ProjectThree() {
   const [showDetail, setShowDetail] = useState(false)
   const timeoutRef = useRef(null)
