@@ -1,5 +1,5 @@
 import React from 'react'
-import { BlurBlue, BlurWhite } from './project.styles'
+import { BlurBlue, BlurWhite, ProjectSection } from './project.styles'
 import ProjectOne from './ProjectCard/ProjectOne.jsx'
 import ProjectTwo from './ProjectCard/ProjectTwo.jsx'
 import ProjectThree from './ProjectCard/ProjectThree.jsx'
@@ -11,14 +11,11 @@ import ProjectEigth from './ProjectCard/ProjectEigth.jsx'
 
 function Project() {
   return (
-    <section
-      id="project"
-      className="font-abel relative w-[80%] p-3 gap-11 pt-28 sm:h-[900px] justify-center flex flex-col "
-    >
+    <ProjectSection id="project">
       <h1 className=" w-full text-center text-[3em]">Projects</h1>
       <BlurBlue />
       <BlurWhite />
-      <div className="relative  justify-center items-center flex flex-col gap-y-4 w-full h-full flex-wrap ">
+      <div className="relative text-sm justify-center items-center flex flex-col gap-y-4 w-full h-full flex-wrap ">
         <ProjectOne />
         <ProjectTwo />
         <ProjectThree />
@@ -32,7 +29,7 @@ function Project() {
           <ProjectSix />
         </div>
       </div>
-    </section>
+    </ProjectSection>
   )
 }
 

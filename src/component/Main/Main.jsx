@@ -5,6 +5,7 @@ import Intro from '../Intro'
 
 import About from '../About'
 import Project from '../Project/Project'
+import Contact from '../Contact/Contact'
 
 export default function Main() {
   return (
@@ -24,6 +25,7 @@ export default function Main() {
       <Intro />
       <About />
       <Project />
+      <Contact />
     </motion.section>
   )
 }

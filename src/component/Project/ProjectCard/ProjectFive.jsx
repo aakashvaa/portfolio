@@ -57,7 +57,7 @@ function ProjectFive() {
                 duration: 1,
               },
             }}
-            className={`absolute sm:flex flex-col justify-between hidden w-[300px] -bottom-2 -right-5 items-center  z-50 border-2 backdrop-blur-xl p-5  rounded-md drop-shadow-lg px-3 border-[#b2b2b222]`}
+            className={`absolute sm:flex flex-col justify-between hidden w-[300px] h-full bottom-0 -right-5 items-center  z-50 border-2 backdrop-blur-xl rounded-md drop-shadow-lg p-3 border-[#b2b2b222]`}
           >
             <h1>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.

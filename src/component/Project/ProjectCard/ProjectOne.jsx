@@ -59,7 +59,7 @@ function ProjectOne() {
                 duration: 1,
               },
             }}
-            className={`absolute -top-4 -left-4 w-[300px] hidden sm:flex flex-col  z-50 border-2 backdrop-blur-xl p-1 text-white rounded-md drop-shadow-lg px-3 border-[#b2b2b222]`}
+            className={`absolute top-0 -left-4 w-[300px] h-full justify-between hidden sm:flex flex-col  z-50 border-2 backdrop-blur-xl  text-white rounded-md drop-shadow-lg p-3 border-[#b2b2b222]`}
           >
             <h1>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.

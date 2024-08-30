@@ -4,6 +4,13 @@ import linkedin from '../../assets/linkedin.svg'
 import github from '../../assets/github.svg'
 import hashnode from '../../assets/hashnode.svg'
 import { ATag } from '../Navbar/navbar.styles'
+import tw from 'twin.macro'
+
+const NavbarContainer = tw.nav`
+absolute  backdrop-blur-xl shadow-md border-[1px] border-[#9e9e9e17] items-center top-10 gap-5 right-0 flex flex-col text-sm w-[200px] rounded-md px-3 py-5
+
+
+`
 function MobileNavbar() {
   const [toggleMenu, setToggleMenu] = useState(false)
 
@@ -29,7 +36,7 @@ function MobileNavbar() {
         </svg>
       </div>
       {toggleMenu && (
-        <div className="absolute  backdrop-blur-xl shadow-md border-[1px] border-[#9e9e9e17] items-center top-10 gap-5 right-0 flex flex-col text-sm w-[200px] rounded-md px-3 py-5">
+        <NavbarContainer>
           <ATag href="#top"> Top</ATag>
           <ATag href="#skills">Skills </ATag>
           <ATag href="#about">About</ATag>
@@ -86,7 +93,7 @@ function MobileNavbar() {
               />
             </a>
           </div>
-        </div>
+        </NavbarContainer>
       )}
     </div>
   )

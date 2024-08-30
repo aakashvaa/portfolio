@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import project1 from '../../../assets/project1.png'
+import githelper from '../../../assets/githelper.png'
+import github from '../../../assets/github.svg'
+import open from '../../../assets/open.svg'
 function ProjectThree() {
   const [showDetail, setShowDetail] = useState(false)
   const timeoutRef = useRef(null)
@@ -44,7 +46,7 @@ function ProjectThree() {
           width={400}
           height={300}
           className="w-[250px] h-[180px] opacity-85 hover:opacity-95 hover:drop-shadow-lg rounded-xl "
-          src={project1}
+          src={githelper}
           alt="project1"
         />
         <p className="w-full text-end">githelper</p>
@@ -57,29 +59,45 @@ function ProjectThree() {
                 duration: 1,
               },
             }}
-            className={`absolute -top-4 -right-4 w-[300px] hidden sm:flex flex-col  z-50 border-2 backdrop-blur-xl p-1 text-white rounded-md drop-shadow-lg px-3 border-[#b2b2b222]`}
+            className={`absolute top-0 -right-4 w-[300px] h-full justify-between hidden sm:flex flex-col  z-50 border-2 backdrop-blur-xl text-white rounded-md drop-shadow-lg p-3 border-[#b2b2b222]`}
           >
-            <h1>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Explicabo molestiae quas amet delectus voluptate aut excepturi
-              perferendis sed
-            </h1>{' '}
-            <div className="flex justify-between w-full text-black">
+            <div className="flex flex-col text-[14px] gap-y-2">
+              <h1 className=" ">
+                This script the need for repetitive git commands for adding,
+                committing, and pushing changes.
+              </h1>
+              <p>
+                <span className="text-balance text-black ">
+                  language used :
+                </span>
+                {'  '}SHELL
+              </p>
+            </div>
+            <div className="flex justify-between items-center w-full text-black">
               <a
                 className="underline"
-                href="http://"
+                href="https://www.npmjs.com/package/githelper125"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                open
+                <img
+                  className="cursor-pointer"
+                  src={open}
+                  width={15}
+                  alt="open"
+                />
               </a>
               <a
-                href="http://"
-                className="underline"
+                href="https://github.com/akaashvaa/git-helper"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                git
+                <img
+                  className="cursor-pointer"
+                  src={github}
+                  width={15}
+                  alt="ghpopen"
+                />
               </a>
             </div>
           </motion.div>
