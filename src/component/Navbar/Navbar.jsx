@@ -33,7 +33,7 @@ function Navbar() {
       <NavStyle>
         <Logo />
         <div className="flex font-light fixed z-50 top-5 gap-x-3 justify-center items-center backdrop-blur-xl px-10 py-3 rounded-3xl">
-          {['skills', 'about', 'project', 'contact'].map((name, i) => (
+          {['skills', 'about', 'project','experience', 'contact'].map((name, i) => (
             <NavbarList
               key={name}
               setPosition={setPosition}
@@ -43,9 +43,9 @@ function Navbar() {
           ))}
           <motion.div
             animate={position}
-            className="absolute z-10  rounded-full h-10 bg-[#ffffff24]  px-5 py-1 hover:backdrop-blur-3xl"
+            className="absolute z-10  rounded-full h-10  px-5 py-1 hover:blur-lg btn"
           ></motion.div>
-          <div className="mx-5">|</div>
+          <div className="mx-5">|</div>  
           <div className="flex w-[200px] justify-between items-center">
             <a
               href="https://github.com/akaashvaa"

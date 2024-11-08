@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import project1 from '../../../assets/project1.png'
+import uvault from '../../../assets/uvault.png'
 import { motion } from 'framer-motion'
 
 function ProjectSeven() {
@@ -36,15 +36,15 @@ function ProjectSeven() {
           y: 0,
           transition: { type: 'spring', duration: 1 },
         }}
-        className="flex relative flex-col w-[250px] h-[180px] "
+        className="flex relative flex-col w-[350px] h-[250px] "
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
         <img
-          width={400}
-          height={300}
-          className="w-[250px] h-[180px] opacity-85 hover:opacity-95 hover:drop-shadow-lg rounded-xl "
-          src={project1}
+          width={800}
+          height={400}
+          className="w-[350px] h-[200px] opacity-85 hover:opacity-95 hover:drop-shadow-lg rounded-xl "
+          src={uvault}
           alt="project1"
         />
         <p className="w-full text-end">githelper</p>

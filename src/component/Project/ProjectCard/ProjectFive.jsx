@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import project1 from '../../../assets/project1.png'
+import project1 from '../../../assets/trello.png'
 import { motion } from 'framer-motion'
 
 function ProjectFive() {
