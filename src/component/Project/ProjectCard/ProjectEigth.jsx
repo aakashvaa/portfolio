@@ -1,91 +1,60 @@
-import React, { useRef, useState } from 'react'
-import project1 from '../../../assets/project1.png'
-import { motion } from 'framer-motion'
-function ProjectEigth() {
-  const [showDetail, setShowDetail] = useState(false)
-  const timeoutRef = useRef(null)
+import React, { useRef, useState } from "react";
+import uvault from "../../../assets/project1.png";
+import { motion } from "framer-motion";
+
+function ProjectEight() {
+  const [showDetail, setShowDetail] = useState(false);
 
   const handleMouseEnter = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current)
-    }
-
-    timeoutRef.current = setTimeout(() => {
-      console.log('hlw')
-      setShowDetail(true)
-    }, 600)
-  }
+    setShowDetail(true);
+  };
 
   const handleMouseLeave = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current)
-    }
-
-    timeoutRef.current = setTimeout(() => {
-      console.log('bye')
-      setShowDetail(false)
-    }, 300)
-  }
+    setShowDetail(false);
+  };
   return (
     <>
       <motion.div
         initial={{ y: -100 }}
-        whileInView={{
-          y: 0,
-
-          transition: { type: 'spring', duration: 1 },
-        }}
         viewport={{ once: true }}
+        whileInView={{
+          y: 150,
+          x: 30,
+          transition: { type: "spring", mass: 2, duration: 1 },
+        }}
+        className="flex flex-col-reverse relative  w-[350px] h-[400px]   pxy rounded-md "
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        className="flex relative flex-col w-[250px] h-[180px] "
       >
-        <img
-          width={400}
-          height={300}
-          className="w-[250px] h-[180px] opacity-85 hover:opacity-95 hover:drop-shadow-lg rounded-xl "
-          src={project1}
-          alt="project1"
-        />
-        <p className="w-full text-end">githelper</p>
-        {showDetail && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{
-              opacity: 1,
-              transition: {
-                duration: 1,
-              },
+        <div className="w-full h-full bg-[#00000044] relative rounded-2xl ">
+          {/* <div className="absolute w-[100px] h-[200px]  shadow-sm left-0 bottom-0  -z-20 bg-[#d1d0d1]   blur-sm" /> */}
+
+          <div className="absolute w-[150px] h-[50px] hue-rotate-5 backdrop-hue-rotate-30  brightness-200  shadow-xl drop-shadow-2xl left-0 top-0  -z-20 bg-[#005299]   blur-md" />
+          <div className="absolute w-[140px] h-[100px] hue-rotate-15  backdrop-hue-rotate-60 brightness-200    shadow-xl drop-shadow-2xl right-0 top-0  -z-20 bg-[#0052bb]   blur-md" />
+          <div className="m-2  ">
+            <img
+              width={800}
+              height={400}
+              className={`w-[350px] h-[200px] opacity-85 hover:opacity-95 hover:drop-shadow-lg rounded-xl `}
+              src={uvault}
+              alt="fashion globe"
+            />
+          </div>
+          <div
+            className="absolute left-0 bottom-0 w-full  h-[60%] backdrop-blur-sm rounded-b-2xl rounded-t-sm  px-4 py-2 "
+            style={{
+              background:
+                "linear-gradient( 90deg, #000 0%, rgba(50, 50, 50, 0.6) 50%, #000  100%)",
             }}
-            className={`absolute sm:flex flex-col  hidden w-[300px] h-full justify-between bottom-0 -right-5 items-center  z-50 border-2 backdrop-blur-xl  rounded-md drop-shadow-lg p-3 border-[#b2b2b222]`}
           >
-            <h1>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Explicabo m necessitatibus quod modi dignissimos vel sequi.
-            </h1>
-            <div className="flex justify-between w-full text-black">
-              <a
-                className="underline"
-                href="http://"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                open
-              </a>
-              <a
-                href="http://"
-                className="underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                git
-              </a>
-            </div>
-          </motion.div>
-        )}
-      </motion.div>{' '}
+            <h4 className="px-2 font-thin w-full tracking-widest ">
+              Fashion Globe
+            </h4>
+          </div>
+        </div>
+      </motion.div>
     </>
-  )
+  );
 }
 
-export default ProjectEigth
+export default ProjectEight;

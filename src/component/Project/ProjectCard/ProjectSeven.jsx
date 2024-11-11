@@ -15,20 +15,22 @@ function ProjectSeven() {
   return (
     <>
       <motion.div
-        initial={{ y: 100 }}
+        initial={{ y: -100 }}
         viewport={{ once: true }}
         whileInView={{
-          y: 0,
-          transition: { type: "spring", duration: 1 },
+          y: 150,
+          x: -30,
+          transition: { type: "spring", mass: 2, duration: 0.7, stiffness: 50 },
         }}
         className="flex flex-col-reverse relative  w-[350px] h-[400px]   pxy rounded-md "
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
         <div className="w-full h-full bg-[#00000044] relative rounded-2xl ">
-          <div className="absolute w-[50px] h-[300px] rotate-45 shadow-2xl left-[50%]  -z-20 bg-white   blur-3xl">
-            {" "}
-          </div>
+          {/* <div className="absolute w-[150px] h-[200px] shadow-sm right-0 bottom-0  -z-20 bg-[#d1d0d1]   blur-sm" /> */}
+          <div className="absolute w-[150px] h-[100px]  backdrop-hue-rotate-90 brightness-200  shadow-xl drop-shadow-xl left-0 top-0  -z-20 bg-[#0f00f0]   blur-md" />
+
+          <div className="absolute w-[140px] h-[100px]  backdrop-hue-rotate-90  brightness-200  shadow-xl drop-shadow-xl right-0 top-0  -z-20 bg-[#a11ffa]   blur-md" />
           <div className="m-2  ">
             <img
               width={800}
@@ -45,7 +47,7 @@ function ProjectSeven() {
                 "linear-gradient( 90deg, #000 0%, rgba(50, 50, 50, 0.6) 50%, #000  100%)",
             }}
           >
-            <h4 className="px-2 ">uVault</h4>
+            <h4 className="px-2 font-thin w-full tracking-widest">uVault</h4>
           </div>
         </div>
       </motion.div>

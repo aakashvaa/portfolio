@@ -19,7 +19,7 @@ export default function Main() {
           ease: "easeIn",
         },
       }}
-      className="w-full items-center pt-14 sm:pt-[9rem] pb-[7rem] flex flex-col  "
+      className="w-full items-center pt-14  sm:pt-[9rem] pb-[7rem] flex flex-col  "
     >
       <Navbar />
       <Intro />

@@ -1,9 +1,9 @@
-import './App.css'
-import AnimationCanvas from './component/AnimationCanvas'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import AnimationLogo from './AnimationLogo/AnimationLogo.jsx'
-import { motion } from 'framer-motion'
-import { Suspense } from 'react'
+import "./App.css";
+import AnimationCanvas from "./component/AnimationCanvas";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AnimationLogo from "./AnimationLogo/AnimationLogo.jsx";
+import { motion } from "framer-motion";
+import { Suspense } from "react";
 
 function HeroContainer() {
   return (
@@ -18,7 +18,7 @@ function HeroContainer() {
         <AnimationLogo />
       </div>
     </motion.div>
-  )
+  );
 }
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
         <Route index element={<HeroContainer />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

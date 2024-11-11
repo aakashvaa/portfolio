@@ -15,7 +15,7 @@ const AnimationLogo = () => {
   }, []);
   return (
     <div
-      className={`flex relative flex-col w-full ${!disableSVG ? " h-[100vh]  overflow-hidden " : "overflow-y-auto overflow-x-hidden"} `}
+      className={`flex relative flex-col w-full ${!disableSVG ? " h-[100vh]  overflow-hidden " : ""} `}
       style={gradientStyle}
     >
       {!disableSVG ? <SVG /> : <Main />}
