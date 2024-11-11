@@ -1,91 +1,56 @@
-import React, { useRef, useState } from 'react'
-import project1 from '../../../assets/project1.png'
-import { motion } from 'framer-motion'
+import React, { useRef, useState } from "react";
+import uvault from "../../../assets/uvault.png";
+import { motion } from "framer-motion";
 
 function ProjectSix() {
-  const [showDetail, setShowDetail] = useState(false)
-  const timeoutRef = useRef(null)
+  const [showDetail, setShowDetail] = useState(false);
 
   const handleMouseEnter = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current)
-    }
-
-    timeoutRef.current = setTimeout(() => {
-      console.log('hlw')
-      setShowDetail(true)
-    }, 600)
-  }
+    setShowDetail(true);
+  };
 
   const handleMouseLeave = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current)
-    }
-
-    timeoutRef.current = setTimeout(() => {
-      console.log('bye')
-      setShowDetail(false)
-    }, 300)
-  }
+    setShowDetail(false);
+  };
   return (
     <>
       <motion.div
-        initial={{ x: -200 }}
+        initial={{ y: 100 }}
         viewport={{ once: true }}
         whileInView={{
-          x: 0,
-          transition: { type: 'spring', duration: 1 },
+          y: 0,
+          transition: { type: "spring", duration: 1 },
         }}
-        className="flex  relative flex-col w-[250px] h-[180px] "
+        className="flex flex-col-reverse relative  w-[350px] h-[400px]   pxy rounded-md "
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <img
-          width={400}
-          height={300}
-          className="w-[250px] h-[180px] opacity-85 hover:opacity-95 hover:drop-shadow-lg rounded-xl "
-          src={project1}
-          alt="project1"
-        />
-        <p className="w-full text-end">githelper</p>
-        {showDetail && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{
-              opacity: 1,
-              transition: {
-                duration: 1,
-              },
+        <div className="w-full h-full bg-[#00000044] relative rounded-2xl ">
+          <div className="absolute w-[50px] h-[300px] rotate-45 shadow-2xl left-[50%]  -z-20 bg-white   blur-3xl">
+            {" "}
+          </div>
+          <div className="m-2  ">
+            <img
+              width={800}
+              height={400}
+              className={`w-[350px] h-[200px] opacity-85 hover:opacity-95 hover:drop-shadow-lg rounded-xl `}
+              src={uvault}
+              alt="project1"
+            />
+          </div>
+          <div
+            className="absolute left-0 bottom-0 w-full  h-[60%] backdrop-blur-sm rounded-b-2xl rounded-t-sm  px-4 py-2 "
+            style={{
+              background:
+                "linear-gradient( 90deg, #000 0%, rgba(50, 50, 50, 0.6) 50%, #000  100%)",
             }}
-            className={`absolute sm:flex flex-col justify-between hidden w-[300px] h-full bottom-0 -right-5 items-center  z-50 border-2 backdrop-blur-xl rounded-md drop-shadow-lg p-3 border-[#b2b2b222]`}
           >
-            <h1>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Explicabo m necessitatibus quod modi dignissimos vel sequi.
-            </h1>
-            <div className="flex justify-between w-full text-black">
-              <a
-                className="underline"
-                href="http://"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                open
-              </a>
-              <a
-                href="http://"
-                className="underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                git
-              </a>
-            </div>
-          </motion.div>
-        )}
+            <h4 className="px-2 ">uVault</h4>
+          </div>
+        </div>
       </motion.div>
     </>
-  )
+  );
 }
 
-export default ProjectSix
+export default ProjectSix;

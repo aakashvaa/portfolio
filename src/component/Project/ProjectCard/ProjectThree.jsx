@@ -1,33 +1,32 @@
-import React, { useRef, useState } from 'react'
-import { motion } from 'framer-motion'
-import githelper from '../../../assets/githelper.png'
-import github from '../../../assets/github.svg'
-import open from '../../../assets/open.svg'
+import React, { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import githelper from "../../../assets/githelper.png";
+import open from "../../../assets/open.svg";
 function ProjectThree() {
-  const [showDetail, setShowDetail] = useState(false)
-  const timeoutRef = useRef(null)
+  const [showDetail, setShowDetail] = useState(false);
+  const timeoutRef = useRef(null);
 
   const handleMouseEnter = (event) => {
     if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current)
+      clearTimeout(timeoutRef.current);
     }
 
     timeoutRef.current = setTimeout(() => {
-      console.log('hlw')
-      setShowDetail(true)
-    }, 600)
-  }
+      console.log("hlw");
+      setShowDetail(true);
+    }, 600);
+  };
 
   const handleMouseLeave = () => {
     if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current)
+      clearTimeout(timeoutRef.current);
     }
 
     timeoutRef.current = setTimeout(() => {
-      console.log('bye')
-      setShowDetail(false)
-    }, 300)
-  }
+      console.log("bye");
+      setShowDetail(false);
+    }, 300);
+  };
   return (
     <>
       <motion.div
@@ -70,41 +69,15 @@ function ProjectThree() {
                 <span className="text-balance text-black ">
                   language used :
                 </span>
-                {'  '}SHELL
+                {"  "}SHELL
               </p>
             </div>
-            <div className="flex justify-between items-center w-full text-black">
-              <a
-                className="underline"
-                href="https://www.npmjs.com/package/githelper125"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="cursor-pointer"
-                  src={open}
-                  width={15}
-                  alt="open"
-                />
-              </a>
-              <a
-                href="https://github.com/akaashvaa/git-helper"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="cursor-pointer"
-                  src={github}
-                  width={15}
-                  alt="ghpopen"
-                />
-              </a>
-            </div>
+            <div className="flex justify-between items-center w-full text-black"></div>
           </motion.div>
         )}
       </motion.div>
     </>
-  )
+  );
 }
 
-export default ProjectThree
+export default ProjectThree;

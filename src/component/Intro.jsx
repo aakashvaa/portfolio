@@ -17,7 +17,7 @@ function Intro() {
 
   return (
     <IntroContainer>
-      <h1 className="absolute -left-5 -top-3 text-[12px] sm:text-[1em] backdrop-blur-sm p-3">
+      <h1 className="absolute -left-5 -top-3 text-[12px]  rounded-xl sm:text-[1em] backdrop-blur-sm p-3">
         I AM A
       </h1>
       <div className="flex text-[#d4defc] gap-x-1">

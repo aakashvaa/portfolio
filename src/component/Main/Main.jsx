@@ -1,11 +1,11 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import Navbar from '../Navbar/Navbar'
-import Intro from '../Intro'
+import React from "react";
+import { motion } from "framer-motion";
+import Navbar from "../Navbar/Navbar";
+import Intro from "../Intro";
 
-import About from '../About'
-import Project from '../Project/Project'
-import Contact from '../Contact/Contact'
+import About from "../About";
+import Project from "../Project/Project";
+import Contact from "../Contact/Contact";
 
 export default function Main() {
   return (
@@ -16,7 +16,7 @@ export default function Main() {
         opacity: 1,
         transition: {
           duration: 1,
-          ease: 'easeIn',
+          ease: "easeIn",
         },
       }}
       className="w-full items-center pt-14 sm:pt-[9rem] pb-[7rem] flex flex-col  "
@@ -27,5 +27,5 @@ export default function Main() {
       <Project />
       <Contact />
     </motion.section>
-  )
+  );
 }

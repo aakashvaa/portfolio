@@ -11,7 +11,7 @@ import ProjectEigth from "./ProjectCard/ProjectEigth.jsx";
 
 function Project() {
   return (
-         <section
+    <section
       id="project"
       className="font-abel relative w-[80%] p-3 gap-11 pt-28 sm:h-[900px] justify-center flex flex-col "
     >
@@ -19,16 +19,17 @@ function Project() {
       <BlurBlue />
       <BlurWhite />
       <div className="relative  justify-center items-center flex flex-col gap-y-4 w-full h-full flex-wrap ">
-    {/*    <ProjectOne />
+        {/*    <ProjectOne />
         <ProjectTwo />
         <ProjectThree />
         <ProjectFour />
-       */} <div className="sm:absolute lg:z-30 z-0  w-[250px] flex flex-col  sm:justify-between sm:h-[95%] lg:h-[70%] ">
+       */}{" "}
+        <div className="sm:absolute lg:z-30 z-0  w-[250px] flex flex-col  sm:justify-between sm:h-[95%] lg:h-[70%] ">
           <ProjectSeven />
-          <ProjectEigth />
+          {/* <ProjectEigth /> */}
         </div>
         <div className="sm:absolute z-20 sm:w-[60%] sm:h-[180px] flex flex-col sm:flex-row justify-between items-center ">
-          <ProjectFive />
+          {/* <ProjectFive /> */}
           <ProjectSix />
         </div>
       </div>

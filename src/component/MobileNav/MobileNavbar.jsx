@@ -1,22 +1,22 @@
-import React, { useState } from 'react'
-import X from '../../assets/X.svg'
-import linkedin from '../../assets/linkedin.svg'
-import github from '../../assets/github.svg'
-import hashnode from '../../assets/hashnode.svg'
-import { ATag } from '../Navbar/navbar.styles'
-import tw from 'twin.macro'
+import React, { useState } from "react";
+import hashnode from "../../assets/hashnode.svg";
+import { ATag } from "../Navbar/navbar.styles";
+import tw from "twin.macro";
+import XLogo from "../icons/x";
+import Github from "../icons/github";
+import LinkedIn from "../icons/linkedIn";
 
 const NavbarContainer = tw.nav`
 absolute  backdrop-blur-xl shadow-md border-[1px] border-[#9e9e9e17] items-center top-10 gap-5 right-0 flex flex-col text-sm w-[200px] rounded-md px-3 py-5
 
 
-`
+`;
 function MobileNavbar() {
-  const [toggleMenu, setToggleMenu] = useState(false)
+  const [toggleMenu, setToggleMenu] = useState(false);
 
   const handleToggleMenu = () => {
-    setToggleMenu(!toggleMenu)
-  }
+    setToggleMenu(!toggleMenu);
+  };
   return (
     <div className="fixed z-50 top-10  right-5  flex sm:hidden gap-x-10 justify-end  ">
       <div onClick={handleToggleMenu}>
@@ -44,42 +44,10 @@ function MobileNavbar() {
           <ATag href="#contact">Contact</ATag>
           <hr className="  w-full blur-[1.5px] " />
           <div className="flex justify-between items-center gap-x-5">
-            <a
-              href="https://github.com/akaashvaa"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className="cursor-pointer"
-                src={github}
-                width={18}
-                alt="github"
-              />
-            </a>
-            <a
-              href="https://twitter.com/aakashvaa"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className="cursor-pointer  "
-                src={X}
-                width={25}
-                alt="twitter"
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/aakash-kumar-verma-2508ba218/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                className="cursor-pointer  "
-                src={linkedin}
-                width={25}
-                alt="linkedIn"
-              />
-            </a>
+            <Github />
+            <LinkedIn />
+            <XLogo />
+
             <a
               href="https://akaashvaa.hashnode.dev/"
               target="_blank"
@@ -96,7 +64,7 @@ function MobileNavbar() {
         </NavbarContainer>
       )}
     </div>
-  )
+  );
 }
 
-export default MobileNavbar
+export default MobileNavbar;
