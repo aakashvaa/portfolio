@@ -5,8 +5,6 @@ function Contact() {
     "
     >
       <h1 className=" w-full text-center text-[3em]">Contact</h1>
-      <div className="absolute w-[50px] h-[100px] rounded-full scale-[9]    shadow-md -right-[25%] -bottom-[80%]   bg-[#fff]   blur-[80px]" />
-      <div className="absolute w-[50px] h-[100px] rounded-full scale-[9]    shadow-md -left-[25%] -bottom-[200%]  bg-[#fff]   blur-[70px]" />
     </div>
   );
 }

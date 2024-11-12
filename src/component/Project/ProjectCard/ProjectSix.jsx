@@ -1,10 +1,12 @@
 import React, { useRef, useState } from "react";
 import uvault from "../../../assets/githelper.png";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "../../../utils/MediaQuery";
 
 function ProjectSix() {
   const [showDetail, setShowDetail] = useState(false);
-
+  const isSmallScreen = useMediaQuery("(max-width: 1060px)");
+  console.log(isSmallScreen);
   const handleMouseEnter = () => {
     setShowDetail(true);
   };
@@ -15,15 +17,25 @@ function ProjectSix() {
   return (
     <>
       <motion.div
-        initial={{ y: 100, x: -50, opacity: 0.8 }}
-        viewport={{ once: true }}
-        whileInView={{
-          y: -100,
-          x: 350,
-
-          transition: { type: "spring", duration: 1 },
-        }}
-        className="flex flex-col-reverse relative  w-[350px] h-[400px]   pxy rounded-md backdrop-blur-2xl
+        initial={
+          isSmallScreen
+            ? {}
+            : {
+                y: -100,
+                x: -100,
+                opacity: 0.8,
+              }
+        }
+        whileInView={
+          isSmallScreen
+            ? {}
+            : {
+                y: -100,
+                x: 400,
+              }
+        }
+        transition={{ type: "spring", mass: 1, duration: 1 }}
+        className="flex flex-col-reverse relative  w-[350px] my-4 h-[400px]   pxy rounded-md backdrop-blur-2xl
         "
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -38,7 +50,7 @@ function ProjectSix() {
             <img
               width={800}
               height={400}
-              className={`w-[350px] h-[200px] opacity-90  rounded-xl `}
+              className={`w-[350px] h-[200px] opacity-90 object-cover rounded-xl `}
               src={uvault}
               alt="githelper"
             />

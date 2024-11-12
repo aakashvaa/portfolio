@@ -1,10 +1,11 @@
 import React, { useRef, useState } from "react";
 import uvault from "../../../assets/uvault.png";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "../../../utils/MediaQuery";
 
 function ProjectSeven() {
   const [showDetail, setShowDetail] = useState(false);
-
+  const isSmallScreen = useMediaQuery("(max-width: 1060px)");
   const handleMouseEnter = () => {
     setShowDetail(true);
   };
@@ -16,26 +17,29 @@ function ProjectSeven() {
     <>
       <motion.div
         initial={{ y: -100 }}
-        viewport={{ once: true }}
-        whileInView={{
-          y: 150,
-          x: -30,
-          transition: { type: "spring", mass: 2, duration: 0.7, stiffness: 50 },
-        }}
+        whileInView={
+          isSmallScreen
+            ? { y: 0 }
+            : {
+                y: isSmallScreen ? 0 : 150,
+                x: isSmallScreen ? 0 : -20,
+              }
+        }
+        transition={{ type: "spring", mass: 1, duration: 0.7, stiffness: 50 }}
         className="flex flex-col-reverse relative  w-[350px] h-[400px]   pxy rounded-md "
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
         <div className="w-full h-full bg-[#00000044] relative rounded-2xl ">
           {/* <div className="absolute w-[150px] h-[200px] shadow-sm right-0 bottom-0  -z-20 bg-[#d1d0d1]   blur-sm" /> */}
-          <div className="absolute w-[150px] h-[100px]  backdrop-hue-rotate-90 brightness-200  shadow-xl drop-shadow-xl left-0 top-0  -z-20 bg-[#0f00f0]   blur-md" />
+          <div className="absolute w-[150px] h-[100px] hue-rotate-90 backdrop-hue-rotate-90 brightness-200  shadow-xl drop-shadow-xl left-0 top-0  -z-20 bg-[#0f00f0]   blur-md" />
 
-          <div className="absolute w-[140px] h-[100px]  backdrop-hue-rotate-90  brightness-200  shadow-xl drop-shadow-xl right-0 top-0  -z-20 bg-[#a11ffa]   blur-md" />
+          <div className="absolute w-[140px] h-[100px] hue-rotate-60  backdrop-hue-rotate-90  brightness-200  shadow-xl drop-shadow-xl right-0 top-0  -z-20 bg-[#0f00f3]   blur-md" />
           <div className="m-2  ">
             <img
               width={800}
               height={400}
-              className={`w-[350px] h-[200px] opacity-85 hover:opacity-95 hover:drop-shadow-lg rounded-xl `}
+              className={`w-[350px] h-[200px] opacity-90 object-cover rounded-xl `}
               src={uvault}
               alt="project1"
             />

@@ -4,16 +4,21 @@ import { motion } from "framer-motion";
 function IntroText({ text, i, isVisible, delay }) {
   return (
     <motion.h1
-      initial={{ x: (i + 1) * 50, opacity: 0, scale: 3 }}
+      initial={{
+        x: (i + 1) * 5,
+        y: -(i + 1),
+        opacity: 0,
+      }}
       animate={{
-        x: isVisible ? 0 : (i + 1) * 50,
+        x: isVisible ? 0 : 0,
+        y: isVisible ? 0 : i + 1,
         opacity: isVisible ? 1 : 0,
-        scale: 1,
+
         transition: {
           type: "spring",
           delay: delay,
-          duration: 1,
-          mass: 4,
+          duration: 0.5,
+          mass: 3,
           ease: "easeInOut",
         },
       }}

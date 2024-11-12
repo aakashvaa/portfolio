@@ -1,9 +1,11 @@
 import React, { useRef, useState } from "react";
 import trello from "../../../assets/trello.png";
 import { motion } from "framer-motion";
+import { useMediaQuery } from "../../../utils/MediaQuery";
 
 function ProjectFive() {
   const [showDetail, setShowDetail] = useState(false);
+  const isSmallScreen = useMediaQuery("(max-width: 1060px)");
 
   const handleMouseEnter = () => {
     setShowDetail(true);
@@ -15,13 +17,21 @@ function ProjectFive() {
   return (
     <>
       <motion.div
-        initial={{ y: 100, x: 100, fillOpacity: 0.8 }}
-        viewport={{ once: true }}
-        whileInView={{
-          y: -100,
-          x: -350,
-          tansition: { type: "spring", mass: 1, duration: 0.3 },
-        }}
+        initial={
+          isSmallScreen
+            ? { y: -50, scale: 0.5, opacity: 0 }
+            : { y: -100, x: 100, opacity: 0 }
+        }
+        whileInView={
+          isSmallScreen
+            ? { y: 0, scale: 1, opacity: 1 }
+            : {
+                y: -100,
+                x: -400,
+                opacity: 1,
+              }
+        }
+        tansition={{ type: "spring", mass: 1, duration: 1 }}
         className="flex flex-col-reverse relative  w-[350px] h-[400px]   pxy rounded-md "
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -29,14 +39,14 @@ function ProjectFive() {
         <div className="w-full h-full bg-[#00000044] relative rounded-2xl ">
           {/* <div className="absolute w-[100px] h-[50px]  shadow-sm left-5 bottom-5  -z-20 bg-[#d1d0d1]   blur-sm" />
           <div className="absolute w-[150px] h-[50px] shadow-sm right-5 bottom-5  -z-20 bg-[#d1d0d1]   blur-sm" /> */}
-          <div className="absolute w-[190px] h-[50px]  hue-rotate-60 backdrop-hue-rotate-60 brightness-200  shadow-xl drop-shadow-xl left-0 top-0  -z-20 bg-[#ffff00]   blur-md" />
+          <div className="absolute w-[190px] h-[50px]  hue-rotate-60 brightness-200  shadow-xl drop-shadow-xl left-0 top-0  -z-20 bg-[#ffff00]  blur-md" />
 
-          <div className="absolute w-[190px] h-[50px]  hue-rotate-90 backdrop-hue-rotate-60 brightness-200  shadow-xl drop-shadow-xl right-0 top-0  -z-20 bg-[#ffff00]   blur-md" />
+          <div className="absolute w-[190px] h-[50px]  hue-rotate-60   shadow-xl drop-shadow-xl right-0 top-0 -z-20 bg-[#ffff00]  blur-md" />
           <div className="m-2  ">
             <img
               width={800}
               height={400}
-              className={`w-[350px] h-[200px] opacity-90  rounded-xl `}
+              className={`w-[350px] h-[200px] opacity-90  rounded-xl  object-cover`}
               src={trello}
               alt="trello"
             />
