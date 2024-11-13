@@ -2,6 +2,8 @@ import React, { useRef, useState } from "react";
 import trello from "../../../assets/trello.png";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "../../../utils/MediaQuery";
+import Github from "../../icons/github";
+import Live from "../../icons/live";
 
 function ProjectFive() {
   const [showDetail, setShowDetail] = useState(false);
@@ -46,19 +48,25 @@ function ProjectFive() {
             <img
               width={800}
               height={400}
-              className={`w-[350px] h-[200px] opacity-90  rounded-xl  object-cover`}
+              className={`w-[350px] h-[200px] opacity-90 drop-shadow-lg  rounded-xl  object-cover`}
               src={trello}
               alt="trello"
             />
           </div>
           <div
-            className="absolute left-0 bottom-0 w-full  h-[60%] backdrop-blur-sm rounded-b-2xl rounded-t-sm  px-4 py-2 "
+            className="absolute left-0 bottom-0 w-full   h-[60%] backdrop-blur-sm rounded-b-2xl rounded-t-sm  px-4 py-2 "
             style={{
               background:
                 "linear-gradient( 90deg, #000 0%, rgba(50, 50, 50, 0.6) 50%, #000  100%)",
             }}
           >
-            <h4 className="px-2 font-thin w-full tracking-widest">Trello</h4>
+            <div className="flex justify-center items-center">
+              <h4 className="px-2 font-thin w-full tracking-widest">Trello</h4>
+              <div className="contents space-x-3">
+                <Github url="/trelloClient" />
+                <Live url="https://trello-client-r7bt.vercel.app" />
+              </div>
+            </div>
           </div>
         </div>
       </motion.div>

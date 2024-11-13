@@ -1,8 +1,10 @@
 import React, { useRef, useState } from "react";
-import uvault from "../../../assets/githelper.png";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "../../../utils/MediaQuery";
+import Github from "../../icons/github";
+import Live from "../../icons/live";
 
+import fashion from "../../../assets/project1.png";
 function ProjectSix() {
   const [showDetail, setShowDetail] = useState(false);
   const isSmallScreen = useMediaQuery("(max-width: 1060px)");
@@ -43,16 +45,17 @@ function ProjectSix() {
         <div className="w-full h-full bg-[#00000044] relative rounded-2xl ">
           {/* <div className="absolute w-[100px] h-[50px]  shadow-sm left-5 bottom-4 rounded-full  -z-20 bg-[#d1d0d1]   blur-md" />
           <div className="absolute w-[100px] h-[50px] shadow-sm right-5 bottom-4 rounded-full  -z-20 bg-[#d1d0d1]   blur-md" /> */}
-          <div className="absolute w-[190px] h-[50px] hue-rotate-60  backdrop-hue-rotate-60 brightness-200  shadow-xl drop-shadow-xl left-0 top-0  -z-20 bg-[#00ff00]   blur-md" />
+          <div className="absolute w-[150px] h-[100px] hue-rotate-90 backdrop-hue-rotate-90 brightness-200  shadow-xl drop-shadow-xl left-0 top-0  -z-20 bg-[#0f00f0]   blur-md" />
 
-          <div className="absolute w-[190px] h-[50px] hue-rotate-90 backdrop-hue-rotate-90  brightness-200  shadow-xl drop-shadow-xl right-0 top-0  -z-20 bg-[#00ff00]   blur-md" />
+          <div className="absolute w-[140px] h-[100px] hue-rotate-60  backdrop-hue-rotate-90  brightness-200  shadow-xl drop-shadow-xl right-0 top-0  -z-20 bg-[#0f00f3]   blur-md" />
+
           <div className="m-2  ">
             <img
               width={800}
               height={400}
-              className={`w-[350px] h-[200px] opacity-90 object-cover rounded-xl `}
-              src={uvault}
-              alt="githelper"
+              className={`w-[350px] drop-shadow-lg h-[200px] object-cover rounded-xl `}
+              src={fashion}
+              alt="fahsion-globe"
             />
           </div>
           <div
@@ -62,9 +65,15 @@ function ProjectSix() {
                 "linear-gradient( 90deg, #000 0%, rgba(50, 50, 50, 0.6) 50%, #000  100%)",
             }}
           >
-            <h4 className="px-2 font-thin w-full tracking-widest">
-              Git Helper
-            </h4>
+            <div className="flex justify-center items-center">
+              <h4 className="px-2 font-thin w-full tracking-widest ">
+                Fashion Globe
+              </h4>{" "}
+              <div className="contents space-x-3">
+                <Github url="/Fashion-Globe" />
+                <Live url="https://fashion-globe.netlify.app" />
+              </div>
+            </div>
           </div>
         </div>
       </motion.div>

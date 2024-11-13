@@ -19,7 +19,7 @@ function Project() {
   return (
     <section
       id="project"
-      className="font-abel relative w-[100%] lg:w-[100%] p-3 gap-11 pt-28 h-auto sm:h-[900px] justify-center flex flex-col "
+      className="font-abel relative w-[100%] lg:w-[90%] p-3 gap-11 pt-28 h-auto sm:h-[900px] justify-center flex flex-col "
     >
       <h1 className=" w-full text-center text-[3em]">Projects</h1>
       <div className="relative  justify-center items-center my-8 flex flex-col gap-4 w-full h-full flex-wrap ">

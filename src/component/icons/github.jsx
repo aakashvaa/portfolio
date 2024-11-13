@@ -1,28 +1,28 @@
 import { useState } from "react";
 
-export default function Github() {
+export default function Github({ url = "" }) {
   const [hover, setHover] = useState("#f2e6f2ca");
 
   return (
     <a
-      href="https://github.com/akaashvaa"
+      href={`https://github.com/akaashvaa${url}`}
       target="_blank"
       rel="noopener noreferrer"
       onMouseEnter={() => setHover("#fff")}
       onMouseLeave={() => setHover("#f2e6f2ca")}
       style={{ cursor: "pointer" }}
     >
-      <GithubSVG color={hover} />
+      <GithubSVG color={hover} url={!!url} />
     </a>
   );
 }
 
-function GithubSVG({ color }) {
+function GithubSVG({ color, url }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="18"
-      height="18"
+      width={url ? "16.5" : "18"}
+      height={url ? "16.5" : "18"}
       shapeRendering="geometricPrecision"
       textRendering="geometricPrecision"
       imageRendering="optimizeQuality"
