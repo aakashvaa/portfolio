@@ -23,17 +23,17 @@ function ProjectSix() {
           isSmallScreen
             ? {}
             : {
-                y: -100,
-                x: -100,
+                y: -70,
+                x: -70,
                 opacity: 0.8,
               }
         }
         whileInView={
           isSmallScreen
-            ? {}
+            ? { y: 0, x: 0 }
             : {
-                y: -100,
-                x: 400,
+                y: 0,
+                x: 0,
               }
         }
         transition={{ type: "spring", mass: 1, duration: 1 }}
@@ -45,9 +45,10 @@ function ProjectSix() {
         <div className="w-full h-full bg-[#00000044] relative rounded-2xl ">
           {/* <div className="absolute w-[100px] h-[50px]  shadow-sm left-5 bottom-4 rounded-full  -z-20 bg-[#d1d0d1]   blur-md" />
           <div className="absolute w-[100px] h-[50px] shadow-sm right-5 bottom-4 rounded-full  -z-20 bg-[#d1d0d1]   blur-md" /> */}
-          <div className="absolute w-[150px] h-[100px] hue-rotate-90 backdrop-hue-rotate-90 brightness-200  shadow-xl drop-shadow-xl left-0 top-0  -z-20 bg-[#0f00f0]   blur-md" />
+          <div className="absolute w-[250px] h-[100px] hue-rotate-90 backdrop-hue-rotate-90 brightness-200  shadow-xl drop-shadow-xl left-[50px] top-0  -z-50 bg-[#0f00f0]   blur-[120px] " />
+          <div className="absolute w-[190px] h-[100px] hue-rotate-90 backdrop-hue-rotate-90 brightness-200  shadow-xl drop-shadow-xl left-0 top-0  -z-20 bg-[#0f00f0]   blur-md" />
 
-          <div className="absolute w-[140px] h-[100px] hue-rotate-60  backdrop-hue-rotate-90  brightness-200  shadow-xl drop-shadow-xl right-0 top-0  -z-20 bg-[#0f00f3]   blur-md" />
+          <div className="absolute w-[190px] h-[100px] hue-rotate-60  backdrop-hue-rotate-90  brightness-200  shadow-xl drop-shadow-xl right-0 top-0  -z-20 bg-[#0f00f3]   blur-md" />
 
           <div className="m-2  ">
             <img

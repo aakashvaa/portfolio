@@ -19,20 +19,20 @@ function Project() {
   return (
     <section
       id="project"
-      className="font-abel relative w-[100%] lg:w-[90%] p-3 gap-11 pt-28 h-auto sm:h-[900px] justify-center flex flex-col "
+      className="font-abel relative w-[100%] md:w-[90%] p-3 h-auto flex flex-col gap-16 justify-center items-center "
     >
       <h1 className=" w-full text-center text-[3em]">Projects</h1>
-      <div className="relative  justify-center items-center my-8 flex flex-col gap-4 w-full h-full flex-wrap ">
+      <div className="relative  justify-center  items-center my-8 flex flex-col  w-[70%] md:w-full h-full gap-x-24 gap-y-20 md:gap-y-10 ">
         {/*    <ProjectOne />
         <ProjectTwo />
         <ProjectThree />
         <ProjectFour />
        */}
-        <div className="sm:absolute lg:z-30 z-20  sm:h-[180px]  sm:w-[45%] flex flex-col gap-4 sm:flex-row justify-center items-center ">
+        <div className=" z-30  h-[800px] md:h-[450px] gap-x-24  gap-y-10 flex flex-col-reverse  md:flex-row justify-center items-center ">
           <ProjectSeven />
           <ProjectEigth />
         </div>
-        <div className="sm:absolute z-20 lg:z-30 sm:w-[60%] sm:h-[180px] flex flex-col gap-4 sm:flex-row justify-center items-center ">
+        <div className="z-30   h-[800px] md:h-[450px] gap-x-24 flex flex-col gap-y-10 md:flex-row justify-center items-center ">
           <ProjectFive />
           <ProjectSix />
         </div>

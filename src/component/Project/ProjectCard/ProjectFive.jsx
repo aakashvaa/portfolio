@@ -21,15 +21,15 @@ function ProjectFive() {
       <motion.div
         initial={
           isSmallScreen
-            ? { y: -50, scale: 0.5, opacity: 0 }
-            : { y: -100, x: 100, opacity: 0 }
+            ? { y: 0, x: 0, opacity: 0 }
+            : { y: -70, x: 70, opacity: 0 }
         }
         whileInView={
           isSmallScreen
-            ? { y: 0, scale: 1, opacity: 1 }
+            ? { y: 0, opacity: 1 }
             : {
-                y: -100,
-                x: -400,
+                y: 0,
+                x: 0,
                 opacity: 1,
               }
         }
@@ -41,6 +41,7 @@ function ProjectFive() {
         <div className="w-full h-full bg-[#00000044] relative rounded-2xl ">
           {/* <div className="absolute w-[100px] h-[50px]  shadow-sm left-5 bottom-5  -z-20 bg-[#d1d0d1]   blur-sm" />
           <div className="absolute w-[150px] h-[50px] shadow-sm right-5 bottom-5  -z-20 bg-[#d1d0d1]   blur-sm" /> */}
+          <div className="absolute w-[250px] h-[100px]  hue-rotate-60 brightness-200  shadow-xl drop-shadow-xl left-[50px] top-0  -z-50 bg-[#ffff00]  blur-[120px]" />
           <div className="absolute w-[190px] h-[50px]  hue-rotate-60 brightness-200  shadow-xl drop-shadow-xl left-0 top-0  -z-20 bg-[#ffff00]  blur-md" />
 
           <div className="absolute w-[190px] h-[50px]  hue-rotate-60   shadow-xl drop-shadow-xl right-0 top-0 -z-20 bg-[#ffff00]  blur-md" />

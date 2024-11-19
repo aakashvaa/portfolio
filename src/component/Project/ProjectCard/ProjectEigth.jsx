@@ -19,13 +19,13 @@ function ProjectEight() {
   return (
     <>
       <motion.div
-        initial={{ y: -100 }}
+        initial={{ y: 70, x: -70 }}
         whileInView={
           isSmallScreen
-            ? { y: 0 }
+            ? { y: 0, x: 0 }
             : {
-                y: 150,
-                x: 20,
+                y: 0,
+                x: 0,
               }
         }
         transition={{ type: "spring", mass: 1, duration: 1 }}
@@ -36,6 +36,7 @@ function ProjectEight() {
         <div className="w-full h-full bg-[#00000044] relative rounded-2xl ">
           {/* <div className="absolute w-[100px] h-[200px]  shadow-sm left-0 bottom-0  -z-20 bg-[#d1d0d1]   blur-sm" /> */}
 
+          <div className="absolute w-[250px] h-[100px] hue-rotate-60  backdrop-hue-rotate-60 brightness-200  shadow-xl drop-shadow-xl left-[50px] top-0  -z-50 bg-[#00ff00]   blur-[130px]" />
           <div className="absolute w-[190px] h-[50px] hue-rotate-60  backdrop-hue-rotate-60 brightness-200  shadow-xl drop-shadow-xl left-0 top-0  -z-20 bg-[#00ff00]   blur-md" />
 
           <div className="absolute w-[190px] h-[50px] hue-rotate-90 backdrop-hue-rotate-90  brightness-200  shadow-xl drop-shadow-xl right-0 top-0  -z-20 bg-[#00ff00]   blur-md" />
