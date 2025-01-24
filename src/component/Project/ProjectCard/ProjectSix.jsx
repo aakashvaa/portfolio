@@ -23,9 +23,9 @@ function ProjectSix() {
           isSmallScreen
             ? {}
             : {
-                y: -70,
-                x: -70,
-                opacity: 0.8,
+                y: 70,
+                x: 70,
+                opacity: 0,
               }
         }
         whileInView={
@@ -34,7 +34,9 @@ function ProjectSix() {
             : {
                 y: 0,
                 x: 0,
+              opacity: 1,
               }
+          
         }
         transition={{ type: "spring", mass: 1, duration: 1 }}
         className="flex flex-col-reverse relative  w-[350px] my-4 h-[400px]   pxy rounded-md backdrop-blur-2xl
@@ -60,7 +62,7 @@ function ProjectSix() {
             />
           </div>
           <div
-            className="absolute left-0 bottom-0 w-full  h-[60%] backdrop-blur-sm rounded-b-2xl rounded-t-sm  px-4 py-2 "
+            className="absolute flex flex-col gap-3 left-0 bottom-0 w-full  h-[60%] backdrop-blur-sm rounded-b-2xl rounded-t-sm  px-4 py-2 "
             style={{
               background:
                 "linear-gradient( 90deg, #000 0%, rgba(50, 50, 50, 0.6) 50%, #000  100%)",
@@ -68,13 +70,26 @@ function ProjectSix() {
           >
             <div className="flex justify-center items-center">
               <h4 className="px-2 font-thin w-full tracking-widest ">
-                Fashion Globe
-              </h4>{" "}
+                Track Xpenses
+              </h4>
               <div className="contents space-x-3">
-                <Github url="/Fashion-Globe" />
-                <Live url="https://fashion-globe.netlify.app" />
+                <Github url="/track-xpenses" />
+                <Live url="https://know-xpenses.vercel.app/" />
               </div>
             </div>
+            <div className="text-[18px] text-[#999] text-start tracking-wide">
+            
+              <ul className="flex flex-col gap-2">
+                <li>
+               Upload Bank Statement PDF, track transactions, and visualize your investments
+
+             </li>
+             
+              <li>
+                 Tech Track : Next.js, TypeScript, Tailwind CSS, Framer Motion, Zustand 
+              </li>
+             </ul>
+           </div> 
           </div>
         </div>
       </motion.div>

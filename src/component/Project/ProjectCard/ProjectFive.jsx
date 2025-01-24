@@ -22,7 +22,7 @@ function ProjectFive() {
         initial={
           isSmallScreen
             ? { y: 0, x: 0, opacity: 0 }
-            : { y: -70, x: 70, opacity: 0 }
+            : { y: 70, x: -70, opacity: 0 }
         }
         whileInView={
           isSmallScreen
@@ -62,7 +62,7 @@ function ProjectFive() {
             }}
           >
             <div className="flex justify-center items-center">
-              <h4 className="px-2 font-thin w-full tracking-widest">Trello</h4>
+              <h4 className="px-2 font-thin w-full tracking-widest">xPenses Tracker</h4>
               <div className="contents space-x-3">
                 <Github url="/trelloClient" />
                 <Live url="https://trello-client-r7bt.vercel.app" />

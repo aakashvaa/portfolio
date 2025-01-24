@@ -8,13 +8,11 @@ function IntroText({ text, i, isVisible, delay }) {
         x: (i + 1) * 10,
         y: -(i + 1),
         opacity: 0,
-        filter: "blur(15px)",
       }}
       animate={{
         x: isVisible ? 0 : 0,
         y: isVisible ? 0 : i + 1,
         opacity: isVisible ? 1 : 0,
-        filter: "blur(0px)",
         transition: {
           type: "spring",
           delay: delay,

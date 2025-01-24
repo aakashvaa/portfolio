@@ -21,9 +21,10 @@ function Intro() {
 
   return (
     <IntroContainer>
-      <h1 className="absolute -left-5 -top-3 text-[12px]   rounded-xl sm:text-[1em] backdrop-blur-sm p-3">
+      <h1 className="backdrop-blur transition-all duration-300 ease-in-out absolute -left-5 -top-3 text-[12px] rounded-xl sm:text-[1em] p-3">
         I AM
       </h1>
+
       {/* <BlurBlue /> */}
       {/* <BlurWhite /> */}
       <div className="absolute w-[100px] scale-[8] hidden sm:block h-[100px] rounded-full rotate-30 -left-[75%]  sm:-left-[60%]  top-[400px]  -z-20 bg-[#1d24cc]   blur-[200px]" />
