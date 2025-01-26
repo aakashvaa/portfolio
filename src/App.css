@@ -20,7 +20,7 @@ body {
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-    scroll-behaviour  : smooth;
+    scroll-behaviour: smooth;
 }
 .animation {
     position: absolute;
@@ -81,7 +81,7 @@ body {
     stroke-width: 0.3;
 }
 .pxy::before {
-    content: "";
+    content: '';
     position: absolute;
     top: -3%;
     left: -3%;
