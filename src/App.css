@@ -90,5 +90,4 @@ body {
     backdrop-filter: blur(50px);
     border-radius: 16px;
     background-color: #00000066;
-    z-index: -1;
 }

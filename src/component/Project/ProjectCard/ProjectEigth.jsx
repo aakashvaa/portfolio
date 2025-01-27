@@ -5,7 +5,11 @@ import Github from '../../icons/github'
 import Live from '../../icons/live'
 
 import chess from '../../../assets/githelper.png'
-function ProjectEight() {
+
+function ProjectEight({ el, index }) {
+    const { title, imgSrc, links, description, tech } = el
+    console.log(el)
+
     const [showDetail, setShowDetail] = useState(false)
     const isSmallScreen = useMediaQuery('(max-width: 1060px)')
 
@@ -19,33 +23,25 @@ function ProjectEight() {
     return (
         <>
             <motion.div
-                initial={{ y: 70, x: -70 }}
-                whileInView={
-                    isSmallScreen
-                        ? { y: 0, x: 0 }
-                        : {
-                              y: 0,
-                              x: 0,
-                          }
-                }
+                initial={{ y: 70 * index }}
+                whileInView={{ y: 0 }}
+                viewport={{ once: true }}
                 transition={{ type: 'spring', mass: 1, duration: 1 }}
-                className="flex flex-col-reverse relative   w-[350px] h-[400px] my-4   pxy rounded-md "
+                className="flex flex-col-reverse relative   w-[350px] h-[400px] my-4  pxy rounded-md "
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
-                <div className="w-full h-full bg-[#00000044] relative rounded-2xl ">
-                    {/* <div className="absolute w-[100px] h-[200px]  shadow-sm left-0 bottom-0  -z-20 bg-[#d1d0d1]   blur-sm" /> */}
+                <div className="w-full h-full bg-[#00000044] relative rounded-2xl  ">
+                    <div className="absolute w-[150px] h-[100px] brightness-200  shadow-xl drop-shadow-2xl left-[50px] top-0  -z-50 bg-[#0052aa]   blur-[120px] " />
+                    <div className="absolute w-[190px] h-[100px] brightness-200  shadow-xl drop-shadow-2xl left-0 top-0  -z-20 bg-[#0052aa] blur-md" />
+                    <div className="absolute w-[190px] h-[100px] brightness-200    shadow-xl drop-shadow-2xl right-0 top-0  -z-20 bg-[#005299]  blur-md" />
 
-                    <div className="absolute w-[250px] h-[100px] hue-rotate-60  backdrop-hue-rotate-60 brightness-200  shadow-xl drop-shadow-xl left-[50px] top-0  -z-50 bg-[#00ff00]   blur-[130px]" />
-                    <div className="absolute w-[190px] h-[50px] hue-rotate-60  backdrop-hue-rotate-60 brightness-200  shadow-xl drop-shadow-xl left-0 top-0  -z-20 bg-[#00ff00]   blur-md" />
-
-                    <div className="absolute w-[190px] h-[50px] hue-rotate-90 backdrop-hue-rotate-90  brightness-200  shadow-xl drop-shadow-xl right-0 top-0  -z-20 bg-[#00ff00]   blur-md" />
                     <div className="m-2  relative  ">
                         <img
                             width={800}
                             height={400}
                             className={`w-[350px] z-10 h-[200px] drop-shadow-lg opacity-90 object-cover rounded-xl `}
-                            src={chess}
+                            src={imgSrc}
                             alt="chess"
                         />
 
@@ -65,15 +61,15 @@ function ProjectEight() {
                                         rotateZ: [-5, 2, 0],
                                         transition: {
                                             duration: 1.2,
-                                            times: [0, 0.6, 1], // Increased time for 0→-400 portion
-                                            ease: [0.34, 0.1, 0.3, 1], // Smoother bezier curve
+                                            times: [0, 0.6, 1],
+                                            ease: [0.34, 0.1, 0.3, 1],
                                             y: {
                                                 type: 'keyframes',
                                                 ease: [
-                                                    [0.34, 0.1, 0.3, 1], // Smooth ease for 0→-400
-                                                    [0.33, 1.2, 0.64, 1], // Different ease for -400→-100
+                                                    [0.34, 0.1, 0.3, 1],
+                                                    [0.33, 1.2, 0.64, 1],
                                                 ],
-                                                duration: 0.8, // Longer duration for y-axis movement
+                                                duration: 0.8,
                                             },
                                             scale: {
                                                 type: 'spring',
@@ -89,9 +85,8 @@ function ProjectEight() {
                                     }}
                                     exit={{
                                         opacity: [1, 1, 0],
-                                        zIndex: -1,
-                                        y: [-150, 0],
-                                        rotateZ: [0, -3, -5],
+                                        y: [-100, 100],
+                                        rotateZ: [0, 0, -5],
                                         transition: {
                                             duration: 1,
                                             times: [0, 0.5, 1],
@@ -104,28 +99,18 @@ function ProjectEight() {
                                             },
                                         },
                                     }}
-                                    className="absolute -bottom-16 left-0 backdrop-blur-xl rounded-xl p-6 shadow-2xl  "
+                                    className="absolute -bottom-16 bg-black/10 left-0 backdrop-blur-xl rounded-xl p-6 shadow-2xl  "
                                 >
                                     <p className="text-sm text-gray-300 contrast-200 ">
-                                        A real-time multiplayer chess game with
-                                        move validation, game history, and
-                                        interactive board. Features include
-                                        pplayer matchmaking, chat functionality,
-                                        and game analysis.la
+                                        {description}
                                     </p>
-                                    <div className="flex flex-wrap gap-2 mb-6">
-                                        {[
-                                            'React',
-                                            'TypeScript',
-                                            'Node.js',
-                                            'Socket.io',
-                                            'Tailwind CSS',
-                                        ].map((tech) => (
+                                    <div className="flex flex-wrap justify-balance gap-2 mt-2 mb-6">
+                                        {tech.map((name) => (
                                             <span
                                                 key={tech}
-                                                className="px-3 py-1 text-xs bg-white/10 rounded-full text-gray-300"
+                                                className="px-3 py-1 text-xs bg-black/10  rounded-full "
                                             >
-                                                {tech}
+                                                {name}
                                             </span>
                                         ))}
                                     </div>
@@ -134,7 +119,7 @@ function ProjectEight() {
                         </AnimatePresence>
                     </div>
                     <div
-                        className="absolute  isolate left-0 bottom-0 w-full  h-[60%] backdrop-blur-sm rounded-b-2xl rounded-t-sm  px-4 py-2 "
+                        className="absolute  isolate left-0 bottom-0 w-full  h-[60%] backdrop-blur-md rounded-b-2xl rounded-t-sm  px-4 py-2 "
                         style={{
                             background:
                                 'linear-gradient( 90deg, #000 0%, rgba(50, 50, 50, 0.6) 50%, #000  100%)',
@@ -142,11 +127,11 @@ function ProjectEight() {
                     >
                         <div className="flex justify-center items-center">
                             <h4 className="px-2 font-thin w-full tracking-widest">
-                                Chess
+                                {title}
                             </h4>
                             <div className="contents space-x-3">
-                                <Github url="/chess-fe" />
-                                <Live url="https://chess-mu-seven.vercel.app/" />
+                                <Github url={links[0]} />
+                                <Live url={links[1]} />
                             </div>
                         </div>
                     </div>
