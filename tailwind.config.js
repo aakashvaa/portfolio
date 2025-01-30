@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   theme: {
     extend: {
+       animation : {
+          "spin-slow" : "spin 3s linear infinite" 
+       }, 
       transitionDuration: {
         2000: "2000ms", // Custom 3-second duration
       },

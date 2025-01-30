@@ -105,7 +105,7 @@ function Points() {
             <pointsMaterial
                 attach="material"
                 map={imgTex}
-                color={0xf3f3fe}
+                color={0xfff3fe}
                 size={0.6}
                 sizeAttenuation
                 transparent={true}

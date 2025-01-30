@@ -22,20 +22,24 @@ function ProjectSeven() {
                 whileInView={{
                     y: 0,
                 }}
-                className="flex flex-col-reverse relative  w-[115%] h-[400px]   pxy rounded-md "
+                bg-white
+                className="flex flex-col justify-center item-center gap-y-5  relative mx-auto pt-2  w-2/3 rounded-md "
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
-                <div className="w-full h-full bg-[#00000044] relative rounded-2xl ">
-                    <div className="w-full flex mx-auto gap-5 justify-between items-center mt-6 w-1/2 bg-white/5 px-6 py-4 rounded-md h-auto">
+                <div className="w-full relative overflow-hidden h-16 rounded-md before:absolute before:inset-[-50%] before:bg-[conic-gradient(transparent,transparent,#0B3860)] before:animate-spin-slow">
+                    <div className="absolute inset-[5px] mx-auto w-[99%] h-16 rounded-md px-10 flex justify-between  items-center bg-[#101010]">
                         Scan your CSS/SCSS files for duplicate properties and
                         remove them, keeping the last occurrence.
                         <Github url="/css-dublicates-cleaner" />
                     </div>
-                    <div className="w-full flex mx-auto gap-5 justify-between items-center mt-6 w-1/2 bg-white/5 px-6 py-4 rounded-md h-auto">
-                        Takes the Screenshot of your system's window and send it
-                        to your predefined WhatsApp number.
-                        <Github url="/screenshotSender" />
+                </div>
+
+                <div className="w-full relative overflow-hidden  h-16 rounded-md before:absolute before:inset-[-50%] before:bg-[conic-gradient(transparent,transparent,#0B3860)] before:animate-spin-slow">
+                    <div className="absolute left-[0.5%] mx-auto w-[99%] h-16 rounded-md px-10 flex justify-between  items-center bg-[#101010]">
+                        Scan your CSS/SCSS files for duplicate properties and
+                        remove them, keeping the last occurrence.
+                        <Github url="/css-dublicates-cleaner" />
                     </div>
                 </div>
             </motion.div>
