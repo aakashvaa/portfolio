@@ -1,17 +1,13 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useMediaQuery } from '../../../utils/MediaQuery'
 import Github from '../../icons/github'
 import Live from '../../icons/live'
 
-import chess from '../../../assets/githelper.png'
-
 function ProjectEight({ el, index }) {
     const { title, imgSrc, links, description, tech } = el
-    console.log(el)
 
     const [showDetail, setShowDetail] = useState(false)
-    const isSmallScreen = useMediaQuery('(max-width: 1060px)')
 
     const handleMouseEnter = () => {
         setShowDetail(true)

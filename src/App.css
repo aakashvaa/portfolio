@@ -1,5 +1,5 @@
 :root {
-    --color-hover: rgb(238, 242, 255); /* Hover color */
+    --color-hover: rgb(238, 242, 255);
 }
 
 html,
@@ -20,8 +20,8 @@ body {
     min-height: 100vh;
     justify-content: center;
     align-items: center;
-    scroll-behaviour: smooth;
 }
+
 .animation {
     position: absolute;
     top: 0;

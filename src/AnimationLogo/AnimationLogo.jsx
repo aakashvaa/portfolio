@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import SVG from '../component/SVG'
-import tw from 'twin.macro'
+
 import Main from '../component/Main/Main'
 
 const gradientStyle = {

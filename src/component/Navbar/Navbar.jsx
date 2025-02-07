@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 
-import hashnode from '../../assets/hashnode.svg'
-import hashnodeh from '../../assets/hashnodeh.svg'
 import Github from '../icons/github.jsx'
 import Logo from '../Logo.jsx'
 import X from '../icons/x.jsx'
@@ -17,13 +15,7 @@ function Navbar() {
         width: 0,
         opacity: 0,
     })
-    const [hover, setHover] = useState('')
-    const handleHover = (name) => {
-        setHover(name)
-    }
-    const handleRemoveHover = () => {
-        setHover('')
-    }
+
     return (
         <>
             <NavStyle>
@@ -32,8 +24,8 @@ function Navbar() {
                     {[
                         'skills',
                         'about',
-                        'project',
                         'experience',
+                        'project',
                         'contact',
                     ].map((name, i) => (
                         <NavbarList
@@ -49,27 +41,10 @@ function Navbar() {
                         className="absolute z-10  rounded-full h-10  px-5 py-1 btn "
                     />
                     <div className="mx-5">|</div>
-                    <div className="flex w-[200px] justify-between items-center">
+                    <div className="flex w-[150px] justify-between items-center">
                         <Github />
                         <X />
                         <LinkedIn />
-
-                        <a
-                            href="https://akaashvaa.hashnode.dev/"
-                            target="_blank"
-                            onMouseEnter={() => handleHover('hashnode')}
-                            onMouseLeave={handleRemoveHover}
-                            rel="noopener noreferrer"
-                        >
-                            <img
-                                className="cursor-pointer  "
-                                src={
-                                    hover === 'hashnode' ? hashnodeh : hashnode
-                                }
-                                width={20}
-                                alt="hashnode"
-                            />
-                        </a>
                     </div>
                 </div>
             </NavStyle>

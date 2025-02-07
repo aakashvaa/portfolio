@@ -1,20 +1,9 @@
-import React, { useRef, useState } from 'react'
-import uvault from '../../../assets/uvault.png'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { useMediaQuery } from '../../../utils/MediaQuery'
-import Github from '../../icons/github'
-import Live from '../../icons/live'
+
+import GithubIcon from '../../icons/github'
 
 function ProjectSeven() {
-    const [showDetail, setShowDetail] = useState(false)
-    const isSmallScreen = useMediaQuery('(max-width: 1060px)')
-    const handleMouseEnter = () => {
-        setShowDetail(true)
-    }
-
-    const handleMouseLeave = () => {
-        setShowDetail(false)
-    }
     return (
         <>
             <motion.div
@@ -23,24 +12,24 @@ function ProjectSeven() {
                     y: 0,
                 }}
                 bg-white
-                className="flex flex-col justify-center item-center gap-y-5  relative mx-auto pt-2  w-2/3 rounded-md "
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
+                className="flex z-50 flex-col justify-center item-center gap-y-5  relative mx-auto pt-2  w-2/3 rounded-md "
             >
-                <div className="w-full relative overflow-hidden h-16 rounded-md before:absolute before:inset-[-50%] before:bg-[conic-gradient(transparent,transparent,#0B3860)] before:animate-spin-slow">
-                    <div className="absolute inset-[5px] mx-auto w-[99%] h-16 rounded-md px-10 flex justify-between  items-center bg-[#101010]">
+                <div className="w-full pl-12 pr-4 py-4 bg-white/[0.03] border border-white/[0.05] rounded-xl focus:border-white/20 outline-none text-white/90 placeholder-white/40 transition-all duration-200 hover:border-white/10 flex justify-between items-center gap-5">
+                    <p>
                         Scan your CSS/SCSS files for duplicate properties and
                         remove them, keeping the last occurrence.
-                        <Github url="/css-dublicates-cleaner" />
-                    </div>
-                </div>
+                    </p>
 
-                <div className="w-full relative overflow-hidden  h-16 rounded-md before:absolute before:inset-[-50%] before:bg-[conic-gradient(transparent,transparent,#0B3860)] before:animate-spin-slow">
-                    <div className="absolute left-[0.5%] mx-auto w-[99%] h-16 rounded-md px-10 flex justify-between  items-center bg-[#101010]">
-                        Scan your CSS/SCSS files for duplicate properties and
-                        remove them, keeping the last occurrence.
-                        <Github url="/css-dublicates-cleaner" />
-                    </div>
+                    <GithubIcon url="/css-dublicates-cleaner" />
+                </div>
+                <div className="w-full pl-12 pr-4 py-4 bg-white/[0.03] border border-white/[0.05] rounded-xl focus:border-white/20 outline-none text-white/90 placeholder-white/40 transition-all duration-200 hover:border-white/10 flex justify-between items-center gap-5">
+                    <p>
+                        This tool is useful for quickly sharing screenshots
+                        without needing to manually attach and send them through
+                        WhatsApp.
+                    </p>
+
+                    <GithubIcon url="/screenshotSender" />
                 </div>
             </motion.div>
         </>

@@ -6,6 +6,8 @@ import Intro from '../Intro'
 import About from '../About'
 import Project from '../Project/Project'
 import Contact from '../Contact/Contact'
+import Experience from '../Experience/ExperienceCard'
+import Footer from '../Footer/Footer'
 
 export default function Main() {
     return (
@@ -24,6 +26,7 @@ export default function Main() {
             <Navbar />
             <Intro />
             <About />
+            <Experience />
             <Project />
             <Contact />
             <div className="flex flex-col-reverse z-50 relative w-[170%] sm:w-[103%] h-[400px]   pxy rounded-md ">
@@ -34,6 +37,7 @@ export default function Main() {
                     <div className="absolute w-[250px] h-[100px] brightness-200  shadow-xl drop-shadow-2xl right-[50px] top-0 -z-50 bg-[#0052aa] blur-md " />
                 </div>
             </div>
+            <Footer />
         </motion.section>
     )
 }
