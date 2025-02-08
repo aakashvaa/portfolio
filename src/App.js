@@ -1,6 +1,5 @@
 import './App.css'
 import AnimationCanvas from './component/AnimationCanvas'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import AnimationLogo from './AnimationLogo/AnimationLogo.jsx'
 import { Suspense } from 'react'
 
@@ -21,13 +20,7 @@ function HeroContainer() {
 }
 
 function App() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route index element={<HeroContainer />} />
-            </Routes>
-        </BrowserRouter>
-    )
+    return <HeroContainer />
 }
 
 export default App

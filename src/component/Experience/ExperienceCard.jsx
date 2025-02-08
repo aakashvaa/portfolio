@@ -94,22 +94,6 @@ function Experience() {
             className="relative font-abel w-[80%] p-3 gap-11 pt-28 justify-center items-center flex flex-col mx-auto"
         >
             <h1 className=" w-full text-center text-[3em]">Experience</h1>
-            <motion.div
-                className="fixed inset-0 opacity-20 pointer-events-none"
-                animate={{
-                    background: [
-                        'radial-gradient(circle at 0% 0%, #ffffff11 0%, transparent 50%)',
-                        'radial-gradient(circle at 100% 100%, #ffffff11 0%, transparent 50%)',
-                        'radial-gradient(circle at 0% 100%, #ffffff11 0%, transparent 50%)',
-                        'radial-gradient(circle at 100% 0%, #ffffff11 0%, transparent 50%)',
-                    ],
-                }}
-                transition={{
-                    duration: 15,
-                    repeat: Infinity,
-                    repeatType: 'reverse',
-                }}
-            />
 
             <div className="relative z-10 w-full max-w-4xl">
                 <AnimatePresence mode="wait">

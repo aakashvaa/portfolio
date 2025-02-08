@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 
 import Github from '../icons/github.jsx'
@@ -15,12 +15,35 @@ function Navbar() {
         width: 0,
         opacity: 0,
     })
+    const [isVisible, setIsVisible] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            console.log('Scroll event detected:', window.scrollY)
+            setIsVisible(window.scrollY > 0)
+        }
+
+        window.addEventListener('scroll', handleScroll, { passive: true })
+
+        // Initial check
+        handleScroll()
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
 
     return (
         <>
             <NavStyle>
                 <Logo />
-                <div className="flex font-light fixed z-50 top-5 gap-x-3 justify-center items-center backdrop-blur-xl px-10 py-3 rounded-3xl">
+                <div
+                    className={`flex font-light fixed z-50 top-5 gap-x-3 justify-center items-center backdrop-blur-xl px-10 py-3 rounded-3xl transition-all duration-300 ${
+                        isVisible
+                            ? 'opacity-100 translate-y-0'
+                            : 'opacity-0 translate-y-[-100%]'
+                    }`}
+                >
                     {[
                         'skills',
                         'about',

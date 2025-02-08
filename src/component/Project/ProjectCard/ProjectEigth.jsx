@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useMediaQuery } from '../../../utils/MediaQuery'
 import Github from '../../icons/github'
 import Live from '../../icons/live'
+import Experience from '../../Experience/ExperienceCard'
 
 function ProjectEight({ el, index }) {
     const { title, imgSrc, links, description, tech } = el
@@ -23,14 +24,14 @@ function ProjectEight({ el, index }) {
                 whileInView={{ y: 0 }}
                 viewport={{ once: true }}
                 transition={{ type: 'spring', mass: 1, duration: 1 }}
-                className="flex flex-col-reverse relative   w-[350px] h-[400px] my-4  pxy rounded-md "
+                className="flex flex-col-reverse relative   w-[350px] h-[400px] my-4  pxy rounded-[20px] "
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
             >
-                <div className="w-full h-full bg-[#00000044] relative rounded-2xl  ">
-                    <div className="absolute w-[150px] h-[100px] brightness-200  shadow-xl drop-shadow-2xl left-[50px] top-0  -z-50 bg-[#0052aa]   blur-[120px] " />
-                    <div className="absolute w-[190px] h-[100px] brightness-200  shadow-xl drop-shadow-2xl left-0 top-0  -z-20 bg-[#0052aa] blur-md" />
-                    <div className="absolute w-[190px] h-[100px] brightness-200    shadow-xl drop-shadow-2xl right-0 top-0  -z-20 bg-[#005299]  blur-md" />
+                <div className="w-full h-full bg-[#00000044] relative rounded-xl  ">
+                    <div className="absolute w-[150px] h-[100px] brightness-200  shadow-xl drop-shadow-2xl left-[50px] top-10  -z-50 bg-[#fefefe]   blur-[150px] " />
+                    <div className="absolute w-[190px] h-[100px] brightness-200  shadow-xl drop-shadow-2xl left-3 top-0  -z-20 bg-[#fefefe] blur-md" />
+                    <div className="absolute w-[190px] h-[100px] brightness-200    shadow-xl drop-shadow-2xl right-3 top-0  -z-20 bg-[#fefefe]  blur-md" />
 
                     <div className="m-2  relative  ">
                         <img
@@ -104,7 +105,7 @@ function ProjectEight({ el, index }) {
                                         {tech.map((name) => (
                                             <span
                                                 key={tech}
-                                                className="px-3 py-1 text-xs bg-black/10  rounded-full "
+                                                className="px-3 py-1 text-xs bg-black/20  rounded-full "
                                             >
                                                 {name}
                                             </span>

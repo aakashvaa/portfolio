@@ -87,7 +87,8 @@ body {
     left: -3%;
     width: 106%;
     height: 106%;
-    backdrop-filter: blur(50px);
+
+    backdrop-filter: blur(30px);
     border-radius: 16px;
     background-color: #00000066;
 }
