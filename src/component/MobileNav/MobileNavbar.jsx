@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import hashnode from '../../assets/hashnode.svg'
+
 import { ATag } from '../Navbar/navbar.styles'
 import tw from 'twin.macro'
 import XLogo from '../icons/x'
@@ -47,19 +47,6 @@ function MobileNavbar() {
                         <Github />
                         <LinkedIn />
                         <XLogo />
-
-                        <a
-                            href="https://akaashvaa.hashnode.dev/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <img
-                                className="cursor-pointer  "
-                                src={hashnode}
-                                width={20}
-                                alt="hashnode"
-                            />
-                        </a>
                     </div>
                 </NavbarContainer>
             )}

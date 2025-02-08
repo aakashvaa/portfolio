@@ -1,9 +1,18 @@
 import './App.css'
 import AnimationCanvas from './component/AnimationCanvas'
 import AnimationLogo from './AnimationLogo/AnimationLogo.jsx'
-import { Suspense } from 'react'
+import { Suspense, useState, useEffect } from 'react'
 
 function HeroContainer() {
+    const [isVisible, setIsVisible] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            console.log(window.scrollY)
+            setIsVisible(window.scrollY > 0)
+        }
+        window.addEventListener('scroll', handleScroll)
+    }, [])
     return (
         <div className="main">
             <div className="animation absolute">
