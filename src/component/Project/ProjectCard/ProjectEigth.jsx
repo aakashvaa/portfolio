@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useMediaQuery } from '../../../utils/MediaQuery'
 import Github from '../../icons/github'
 import Live from '../../icons/live'
-import Experience from '../../Experience/ExperienceCard'
 
 function ProjectEight({ el, index }) {
     const { title, imgSrc, links, description, tech } = el

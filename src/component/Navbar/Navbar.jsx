@@ -10,6 +10,7 @@ import NavbarList from './NavbarList.jsx'
 import LinkedIn from '../icons/linkedIn.jsx'
 
 function Navbar() {
+    const [isHovered, setIsHovered] = useState(false)
     const [position, setPosition] = useState({
         left: 0,
         width: 0,
@@ -20,34 +21,52 @@ function Navbar() {
         <>
             <NavStyle>
                 <Logo />
-                <div className="flex font-light fixed z-50 top-5 gap-x-3 justify-center items-center backdrop-blur-lg px-10 py-2 bg-white/10  rounded-xl ">
-                    {[
-                        'skills',
-                        'about',
-                        'experience',
-                        'project',
-                        'contact',
-                    ].map((name, i) => (
-                        <NavbarList
-                            key={name}
-                            setPosition={setPosition}
-                            position={position}
-                            name={name}
-                        />
-                    ))}
-
+                <motion.div
+                    onHoverStart={() => setIsHovered(true)}
+                    onHoverEnd={() => setIsHovered(false)}
+                    className="relative mx-auto w-fit  group"
+                >
                     <motion.div
-                        animate={position}
-                        className="absolute z-10  rounded-full h-10  px-5 py-1 btn "
+                        className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 rounded-xl blur-sm"
+                        animate={{
+                            opacity: isHovered ? 1 : 0.7,
+                        }}
                     />
+                    <motion.div
+                        className="relative w-full py-2 px-6 bg-white/5 text-white/90 rounded-xl font-medium flex items-center justify-center gap-2 transition-all duration-200 border border-white/10 group-hover:border-white/20 backdrop-blur-sm"
+                        whileHover={{
+                            backgroundColor: 'rgba(255,255,255,0.08)',
+                        }}
+                    >
+                        {[
+                            'skills',
+                            'about',
+                            'experience',
+                            'skills',
+                            'project',
+                            'contact',
+                        ].map((name, i) => (
+                            <NavbarList
+                                key={name}
+                                setPosition={setPosition}
+                                position={position}
+                                name={name}
+                            />
+                        ))}
 
-                    <div className="mx-5">|</div>
-                    <div className="flex w-[150px] justify-between items-center">
-                        <Github />
-                        <X />
-                        <LinkedIn />
-                    </div>
-                </div>
+                        <motion.div
+                            animate={position}
+                            className="absolute z-10  rounded-full h-10  px-5 py-1 btn "
+                        />
+
+                        <div className="mx-5">|</div>
+                        <div className="flex w-[150px] justify-between items-center">
+                            <Github />
+                            <X />
+                            <LinkedIn />
+                        </div>
+                    </motion.div>
+                </motion.div>
             </NavStyle>
             <MobileNavbar />
         </>

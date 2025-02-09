@@ -3,7 +3,9 @@ import project2 from '../assets/uvault.png'
 import project3 from '../assets/project1.png'
 import project4 from '../assets/trello.png'
 
-export const svgVariants = {
+import { Code, Database, Globe, Layers } from 'lucide-react'
+
+const svgVariants = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
@@ -12,7 +14,7 @@ export const svgVariants = {
         },
     },
 }
-export const pathVariants = {
+const pathVariants = {
     hidden: {
         opacity: 0,
         pathLength: 0,
@@ -26,7 +28,7 @@ export const pathVariants = {
         },
     },
 }
-export function capitalize(str) {
+function capitalize(str) {
     if (!str) return str
     return str.charAt(0).toUpperCase() + str.slice(1)
 }
@@ -79,7 +81,7 @@ const ProjectData = [
             'Typescript',
             'Tailwind',
             'Chat.js',
-            ,
+
             'Axios',
             'Vercel',
         ],
@@ -101,4 +103,94 @@ const ProjectData = [
         ],
     },
 ]
-export { ProjectData }
+const skills = [
+    {
+        icon: Code,
+        title: 'Frontend Development',
+        description:
+            'Crafting beautiful and responsive user interfaces with modern web technologies.',
+        technologies: [
+            { name: 'React.js' },
+            { name: 'Next.js' },
+            { name: 'TypeScript' },
+            { name: 'JavaScript (ES6)' },
+            { name: 'Redux Toolkit (React Query)' },
+            { name: 'Zustand' },
+            { name: 'HTML5' },
+            { name: 'CSS3' },
+            { name: 'Tailwind CSS' },
+            { name: 'SCSS' },
+            { name: 'Styled Components' },
+            { name: 'Material UI' },
+            { name: 'Framer Motion' },
+        ],
+    },
+    {
+        icon: Layers,
+        title: 'Development Tools',
+        description: 'Proficient with modern development tools and workflows.',
+        technologies: [
+            { name: 'Git' },
+            { name: 'GitLab' },
+            { name: 'Github' },
+            { name: 'Docker' },
+            { name: 'Webpack' },
+            { name: 'Vite' },
+            { name: 'Babel' },
+            { name: 'NPM' },
+            { name: 'YARN' },
+            { name: 'PNPM' },
+            { name: 'BUN' },
+            { name: 'Postman' },
+            { name: 'Swagger' },
+            { name: 'Neovim' },
+            { name: 'CI/CD' },
+            { name: 'Monorepos' },
+            { name: 'Vercel' },
+            { name: 'Netlify' },
+        ],
+    },
+    {
+        icon: Database,
+        title: 'Backend Development',
+        description:
+            'Building robust and scalable server-side applications and APIs.',
+        technologies: [
+            { name: 'Node.js' },
+            { name: 'Express.js' },
+            { name: 'Python' },
+            { name: 'Flask' },
+            { name: 'Prisma' },
+            { name: 'SQL' },
+            { name: 'MySQL' },
+            { name: 'PostgreSQL' },
+            { name: 'Mongoose' },
+            { name: 'MongoDB' },
+            { name: 'Firebase' },
+            { name: 'RESTful APIs' },
+            { name: 'Stripe' },
+        ],
+    },
+    {
+        icon: Globe,
+        title: 'Web Technologies',
+        description:
+            'Expertise in modern web standards and optimization techniques.',
+        technologies: [
+            { name: 'OAuth' },
+            { name: 'WebSocket' },
+            { name: 'JWT' },
+            { name: 'Cookies' },
+            { name: 'ZOD' },
+            { name: 'Axios' },
+            { name: 'SWR' },
+            { name: 'SEO' },
+            { name: 'Redux Saga' },
+            { name: 'Redux Thunk' },
+            { name: 'Redux Logger' },
+            { name: 'Redux Persist' },
+        ],
+    },
+]
+
+export { ProjectData, skills, svgVariants, pathVariants, capitalize }

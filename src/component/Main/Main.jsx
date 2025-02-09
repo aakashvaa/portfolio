@@ -8,6 +8,7 @@ import Project from '../Project/Project'
 import Contact from '../Contact/Contact'
 import Experience from '../Experience/ExperienceCard'
 import Footer from '../Footer/Footer'
+import { SkillsSection } from '../../Skill/Skill'
 
 export default function Main() {
     return (
@@ -27,10 +28,14 @@ export default function Main() {
             <Intro />
             <About />
             <Experience />
+            <SkillsSection />
             <Project />
             <Contact />
 
             <Footer />
+            <h1 className="text-center pt-10 text-white text-2xl font-light text-[1em] tracking-wider">
+                Thank You for Visiting; Wish you a good day!
+            </h1>
         </motion.section>
     )
 }

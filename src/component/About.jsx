@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import { Download } from 'lucide-react'
 function About() {
+    const [isHovered, setIsHovered] = useState(false)
+
     return (
         <section
             id="about"
@@ -46,6 +49,44 @@ function About() {
                 collaborate to turn your ideas into impactful digital
                 experiences!
             </p>
+
+            <motion.a
+                href="/Akash Verma.pdf"
+                target="_blank"
+                type="submit"
+                onHoverStart={() => setIsHovered(true)}
+                onHoverEnd={() => setIsHovered(false)}
+                whileHover={{ scale: 1.01 }}
+                whileTap={{ scale: 0.98 }}
+                className="relative mx-auto w-[70%] mt-10 sm:w-[30%] group"
+            >
+                <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 rounded-xl blur-sm"
+                    animate={{
+                        opacity: isHovered ? 1 : 0.7,
+                    }}
+                />
+                <motion.div
+                    className="relative w-full py-4 px-6 bg-white/5 text-white/90 rounded-xl font-medium flex items-center justify-center gap-2 transition-all duration-200 border border-white/10 group-hover:border-white/20"
+                    whileHover={{
+                        backgroundColor: 'rgba(255,255,255,0.08)',
+                    }}
+                >
+                    <motion.div
+                        animate={{
+                            x: isHovered ? [0, 5, 0] : 0,
+                        }}
+                        transition={{
+                            duration: 1,
+                            repeat: Infinity,
+                            ease: 'easeInOut',
+                        }}
+                    >
+                        <Download className="w-4 h-4" />
+                    </motion.div>
+                    <span>Resume</span>
+                </motion.div>
+            </motion.a>
         </section>
     )
 }
