@@ -52,6 +52,14 @@ const ProjectData = [
         ],
     },
     {
+        title: 'Track Xpenses',
+        links: ['/track-xpenses', 'https://know-xpenses.vercel.app/'],
+        imgSrc: project2,
+        description:
+            'Effortlessly manage your expenses! Upload Bank Statement PDFs and visualize your investments vs. spending with interactive charts and tables. Your financial insights, simplified.',
+        tech: ['Nextjs', 'Typescript', 'Tailwind', 'Axios', 'Vercel'],
+    },
+    {
         title: 'Fashion Globe',
         links: ['/Fashion-Globe', 'https://fashion-globe.netlify.app/'],
         imgSrc: project3,
@@ -77,11 +85,13 @@ const ProjectData = [
         description:
             'Effortlessly manage your expenses! Upload Bank Statement PDFs and visualize your investments vs. spending with interactive charts and tables. Your financial insights, simplified. ',
         tech: [
-            'Nextjs',
+            'NEXT.js',
             'Typescript',
             'Tailwind',
             'Chat.js',
-
+            'pnpm',
+            'clsx',
+            'swr',
             'Axios',
             'Vercel',
         ],

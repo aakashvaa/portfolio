@@ -5,7 +5,7 @@ function Logo() {
     return (
         <a
             href="#top"
-            className="absolute hidden sm:flex right-10 cursor-pointer decoration-transparent "
+            className="absolute hidden sm:flex top-10 right-10 cursor-pointer decoration-transparent "
         >
             <motion.svg
                 width="30"
