@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Briefcase, Calendar } from 'lucide-react'
+import { experiences } from '../../utils/constant'
 
 function ExperienceCard({ year, title, company, description, index }) {
     const [isHovered, setIsHovered] = useState(false)
@@ -22,8 +23,12 @@ function ExperienceCard({ year, title, company, description, index }) {
                         ? 'rgba(255,255,255,0.8)'
                         : 'rgba(255,255,255,0.01)',
                 }}
-            ></motion.div>
-            <motion.div className="absolute right-0 top-3 w-6 h-6 rounded-full bg-white/20 flex items-center justify-center border border-white/20">
+            />
+            <motion.div
+                initial={{ opacity: 0.8 }}
+                animate={{ opacity: isHovered ? 1 : 0.8 }}
+                className="absolute right-0 top-3 w-6 h-6 rounded-full bg-white/20 flex items-center justify-center border border-white/20"
+            >
                 <Calendar className="w-3 h-3 text-white/70" />
             </motion.div>
 
@@ -51,7 +56,12 @@ function ExperienceCard({ year, title, company, description, index }) {
                     {year}
                 </motion.span>
 
-                <motion.h3 className="text-xl font-bold text-white/90 mt-2">
+                <motion.h3
+                    className="text-xl font-bold text-white/90 mt-2"
+                    initial={{ scale: 1 }}
+                    animate={{ scale: isHovered ? 1.005 : 1 }}
+                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                >
                     {title}
                 </motion.h3>
 
@@ -60,9 +70,23 @@ function ExperienceCard({ year, title, company, description, index }) {
                     <span className="text-white/60">{company}</span>
                 </div>
 
-                <motion.p className="text-white/50 mt-3 text-sm leading-relaxed">
+                <motion.p className="text-white/50 tracking-wide mt-3 text-sm leading-relaxed">
                     {description.map((item, index) => (
-                        <p key={index}>{item}</p>
+                        <motion.p
+                            style={{
+                                color: isHovered ? 'white/55' : 'white/50',
+                            }}
+                            key={index}
+                            initial={{ scale: 1 }}
+                            animate={{
+                                scale: isHovered ? 1.005 : 1,
+                            }}
+                            transition={{
+                                ease: 'easeInOut',
+                            }}
+                        >
+                            {item}
+                        </motion.p>
                     ))}
                 </motion.p>
             </motion.div>
@@ -71,23 +95,6 @@ function ExperienceCard({ year, title, company, description, index }) {
 }
 
 function Experience() {
-    const experiences = [
-        {
-            year: 'Nov 2023 - Present',
-            title: 'Full Stack Developer',
-            company: 'Tata Consultancy Services',
-            description: [
-                'Led development of cloud-native applications using React and Node.js. Implemented microservices architecture and improved system performance by 40%.',
-                'Developed responsive web applications using React, SCSS and Docker containerization, improving load time by 30%. Specialized in building scalable solutions with modern JavaScript frameworks.',
-                'Created interactive user interfaces and implemented responsive designs. Collaborated with UX team to improve user experience and engagement by 25%.',
-                'Built a CSS redundancy remover tool and streamlined styling workflows, significantly improving web development efficiency and code maintainability.',
-                'Configured linting tools and CI/CD pipelines using GitHub Actions, enhancing code quality and developer productivity by automating deployment processes.',
-                'Optimized applications for SEO and performance through code splitting and lazy loading, improving search rankings and overall visibility.',
-                'Applied Agile methodologies and led daily standups to accelerate development cycles, ensuring timely feature releases and continuous improvement.',
-            ],
-        },
-    ]
-
     return (
         <div
             id="experience"

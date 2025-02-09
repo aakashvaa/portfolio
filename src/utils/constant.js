@@ -1,7 +1,7 @@
 import project1 from '../assets/githelper.png'
 import project2 from '../assets/uvault.png'
 import project3 from '../assets/project1.png'
-import project4 from '../assets/trello.png'
+import project5 from '../assets/trackXpenses.png'
 
 import { Code, Database, Globe, Layers } from 'lucide-react'
 
@@ -35,6 +35,14 @@ function capitalize(str) {
 
 const ProjectData = [
     {
+        title: 'Track Xpenses',
+        links: ['/track-xpenses', 'https://know-xpenses.vercel.app/'],
+        imgSrc: project5,
+        description:
+            'Effortlessly manage your expenses! Upload Bank Statement PDFs and visualize your investments vs. spending with interactive charts and tables. Your financial insights, simplified.',
+        tech: ['Nextjs', 'Typescript', 'Tailwind', 'Axios', 'Vercel'],
+    },
+    {
         title: 'uVault',
         links: ['/uvault-client', 'https://uvault-store.vercel.app/'],
         imgSrc: project2,
@@ -50,14 +58,6 @@ const ProjectData = [
             'Mongoose',
             'MongoDB',
         ],
-    },
-    {
-        title: 'Track Xpenses',
-        links: ['/track-xpenses', 'https://know-xpenses.vercel.app/'],
-        imgSrc: project2,
-        description:
-            'Effortlessly manage your expenses! Upload Bank Statement PDFs and visualize your investments vs. spending with interactive charts and tables. Your financial insights, simplified.',
-        tech: ['Nextjs', 'Typescript', 'Tailwind', 'Axios', 'Vercel'],
     },
     {
         title: 'Fashion Globe',
@@ -78,24 +78,7 @@ const ProjectData = [
             'React Router DOM',
         ],
     },
-    {
-        title: 'Track Xpenses',
-        links: ['/track-xpenses', 'https://know-xpenses.vercel.app/'],
-        imgSrc: project4,
-        description:
-            'Effortlessly manage your expenses! Upload Bank Statement PDFs and visualize your investments vs. spending with interactive charts and tables. Your financial insights, simplified. ',
-        tech: [
-            'NEXT.js',
-            'Typescript',
-            'Tailwind',
-            'Chat.js',
-            'pnpm',
-            'clsx',
-            'swr',
-            'Axios',
-            'Vercel',
-        ],
-    },
+
     {
         title: 'Chess',
         links: ['/chess-fe', 'https://chess-mu-seven.vercel.app/'],
@@ -202,5 +185,31 @@ const skills = [
         ],
     },
 ]
+const experiences = [
+    {
+        year: 'Nov 2023 - Present',
+        title: 'Full Stack Developer',
+        company: 'Tata Consultancy Services',
+        description: [
+            'Developed responsive web applications using React, Redux Toolkit, SCSS, Express.js, Mongo DB, Mongoose, and Docker.',
 
-export { ProjectData, skills, svgVariants, pathVariants, capitalize }
+            'Managed backend infrastructure using Express.js and Docker, implementing robust user authentication with JWT tokens and secure HTTP-only cookies for enhanced security.',
+            'Designed and implemented role-based authorization system to control user access and permissions across different application features.',
+
+            'Built a CSS redundancy remover tool and streamlined styling workflows, significantly improving web development efficiency and code maintainability.',
+            'Developed and published an AI chat agent plugin/package enabling seamless integration of conversational AI capabilities into applications.',
+            'Built interactive user interfaces and implemented responsive designs, collaborating with the UX team to improve user experience and engagement by 25%.',
+            'Assisted in database optimization and API development reducing API response times by 30%.',
+            'Configured linting tools, enhancing code quality and developer productivity by automating deployment processes.',
+            'Applied Agile methodologies and participated in daily standups to accelerate development cycles, ensuring timely feature releases and continuous improvement.',
+        ],
+    },
+]
+export {
+    ProjectData,
+    skills,
+    svgVariants,
+    pathVariants,
+    capitalize,
+    experiences,
+}
