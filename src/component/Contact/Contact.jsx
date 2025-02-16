@@ -2,19 +2,24 @@ import React, { useRef, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Send, Mail, MessageSquare, Pencil } from 'lucide-react'
 import emailjs from '@emailjs/browser'
+import { ToastContainer, toast } from 'react-toastify'
+
 function App() {
     const formRef = useRef(null)
     const [focused, setFocused] = useState('')
-    const [formState, setFormState] = useState({
-        email: '',
-        subject: '',
-        message: '',
-    })
+
     const [isHovered, setIsHovered] = useState(false)
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        const formData = new FormData(formRef.current)
+        const email = formData.get('user_email')?.trim()
 
+        // Validate email
+        if (!email) {
+            toast.error('Please enter your email address')
+            return
+        }
         if (!formRef.current) return
 
         emailjs
@@ -26,7 +31,7 @@ function App() {
             )
             .then(
                 (result) => {
-                    console.log('Email sent successfully!', result.text)
+                    toast.success('Email sent successfully!')
                 },
                 (error) => {
                     console.error('Error sending email:', error)
@@ -41,6 +46,15 @@ function App() {
             id="contact"
             className="relative font-abel w-[80%] p-3 gap-11 pt-28 justify-center items-center flex flex-col mx-auto"
         >
+            <ToastContainer
+                position="bottom-right"
+                autoClose={3000}
+                hideProgressBar
+                newestOnTop
+                toastStyle={{
+                    backgroundColor: '#0D0E11',
+                }}
+            />
             <h1 className=" w-full text-center text-[3em]">Contact</h1>
 
             <motion.div
@@ -129,6 +143,7 @@ function App() {
                                 </motion.div>
                                 <input
                                     type="email"
+                                    required
                                     name="user_email"
                                     onFocus={() => setFocused('email')}
                                     onBlur={() => setFocused('')}
@@ -165,6 +180,7 @@ function App() {
                                     <Pencil className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4" />
                                 </motion.div>
                                 <input
+                                    required
                                     type="text"
                                     name="subject"
                                     onFocus={() => setFocused('subject')}
