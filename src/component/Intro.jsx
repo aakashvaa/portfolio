@@ -2,7 +2,7 @@ import React, { useTransition, useState, useEffect } from 'react'
 import tw from 'twin.macro'
 import IntroText from './IntroText'
 
-const name1 = 'Full Stack Developer'
+const name1 = 'Frontend & Gen AI Developer'
 const IntroContainer = tw.div`relative justify-center items-end select-none  mt-10 xs:mt-0 border-b  sm:h-[400px] py-5 sm:py-0 border-[#9e9e9e43] w-[80%] flex flex-col`
 
 const BlurBlue = tw.div`w-[220px] sm:flex left-[-160%] hidden h-[220px]   sm:scale-[6] scale-[3]  rounded-full  -z-[40] absolute md:left-[-90%]  top-0 bg-[#1d2486] blur-[200px]`
@@ -27,7 +27,7 @@ function Intro() {
 
             <BlurBlue />
 
-            <div className="absolute w-[100px] scale-[8] hidden sm:block h-[100px] rounded-full rotate-30 -left-[75%]  sm:-left-[60%]  top-[400px]  -z-20 bg-[#1d24cc]   blur-[200px]" />
+            <div className="absolute w-[100px] scale-[6] hidden sm:block h-[100px] rounded-full rotate-30 -left-[75%]  sm:-left-[60%]  top-[400px]  -z-20 bg-[#1d24cc]   blur-[200px]" />
             <div className="flex text-[#d4defc] gap-x-1">
                 {name1.split('').map((text, i) => (
                     <IntroText

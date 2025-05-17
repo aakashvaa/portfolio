@@ -3,7 +3,7 @@ import project2 from '../assets/uvault.png'
 import project3 from '../assets/project1.png'
 import project5 from '../assets/trackXpenses.png'
 
-import { Code, Database, Globe, Layers } from 'lucide-react'
+import { Code, Database, Globe, Layers, Brain } from 'lucide-react'
 
 const svgVariants = {
     hidden: { opacity: 0 },
@@ -106,8 +106,10 @@ const skills = [
             { name: 'React.js' },
             { name: 'Next.js' },
             { name: 'TypeScript' },
-            { name: 'JavaScript (ES6)' },
-            { name: 'Redux Toolkit (React Query)' },
+            { name: 'JavaScript (ES6+)' },
+            { name: 'Redux Toolkit ' },
+            { name: 'Redux Query ' },
+            { name: 'Jest' },
             { name: 'Zustand' },
             { name: 'HTML5' },
             { name: 'CSS3' },
@@ -183,27 +185,65 @@ const skills = [
             { name: 'Redux Logger' },
             { name: 'Redux Persist' },
         ],
+    },  
+  {
+        icon: Brain,
+        title: 'Gen AI Technologies',
+        description:
+            'Generation and Integration of Agents for LLM powered web application',
+        technologies: [
+            { name: 'LangChain' },
+            { name: 'LangGraph' },
+            { name: 'RAG' },
+            { name: 'Google ADK' },
+            { name: 'MCP' },
+            { name: 'Vector Database' },
+       
+        ],
     },
 ]
 const experiences = [
     {
         year: 'Nov 2023 - Present',
-        title: 'Full Stack Developer',
+        title: 'Frontend & Gen AI Developer',
         company: 'Tata Consultancy Services',
-        description: [
-            'Developed responsive web applications using React, Redux Toolkit, SCSS, Express.js, Mongo DB, Mongoose, and Docker.',
-
-            'Managed backend infrastructure using Express.js and Docker, implementing robust user authentication with JWT tokens and secure HTTP-only cookies for enhanced security.',
-            'Designed and implemented role-based authorization system to control user access and permissions across different application features.',
-
-            'Built a CSS redundancy remover tool and streamlined styling workflows, significantly improving web development efficiency and code maintainability.',
-            'Developed and published an AI chat agent plugin/package enabling seamless integration of conversational AI capabilities into applications.',
-            'Built interactive user interfaces and implemented responsive designs, collaborating with the UX team to improve user experience and engagement by 25%.',
-            'Assisted in database optimization and API development reducing API response times by 30%.',
-            'Configured linting tools, enhancing code quality and developer productivity by automating deployment processes.',
-            'Applied Agile methodologies and participated in daily standups to accelerate development cycles, ensuring timely feature releases and continuous improvement.',
+        description:  [
+  "Engineered front-end architecture with API call caching, optimized state management, and minimized unnecessary re-renders to deliver fast, efficient UIs.",
+  "Implemented responsive page layouts and modular React components using Vite, collaborating with the UI/UX team to translate design mockups into production-ready interfaces and integrate them with backend APIs.",
+  "Triaged JIRA tickets and resolved 90% of high-priority UI bugs within two sprints through close collaboration with the backend team.",
+  "Enhanced accessibility by adding ARIA landmarks, semantic HTML, and keyboard navigation to achieve WCAG 2.1 AA compliance.",
+  "Created a reusable npm package to strip duplicate CSS properties and enforce consistent project-wide linting using ESLint and Prettier.",
+  "Structured atomic UI elements into dedicated folders following a monorepo-like pattern to enable consistent styling and composable complex components.",
+  "Developed generative AI prototypes using LangGraph, Retrieval-Augmented Generation (RAG) pipelines, Google ADK, and MCP frameworks to power domain-specific conversational agents and advanced knowledge retrieval."
+  ],
+    technologies : [
+            { name: 'React.js' },
+            { name: 'TypeScript' },
+            { name: 'JavaScript (ES6+)' },
+            { name: 'Redux Toolkit ' },
+            { name: 'Redux Query ' },       
+            { name: 'SEO' },
+            { name: 'Redux Saga' },
+            { name: 'Redux Thunk' },
+            { name: 'Redux Logger' },
+            { name: 'Redux Persist' },
+            { name: 'Jest' },
+            { name: 'SCSS' },            
+            { name: 'Git' },
+            { name: 'GitLab' },
+            { name: 'Github' },
+            { name: 'Docker' },
+            { name: 'Webpack' },
+            { name: 'Vite' },
+            { name: 'Babel' },            
+            { name: 'LangChain' },
+            { name: 'LangGraph' },
+            { name: 'RAG' },
+            { name: 'Google ADK' },
+            { name: 'MCP' },
+            { name: 'Vector Database' },
         ],
-    },
+  },
 ]
 export {
     ProjectData,

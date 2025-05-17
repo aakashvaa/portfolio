@@ -18,7 +18,7 @@ export function TechTag({ name }) {
                         : 'rgba(255,255,255,0.03)',
                 }}
             >
-                <span className="text-white/90 text-sm font-medium tracking-wide">
+                <span className="text-white/90 font-medium tracking-wide">
                     {name}
                 </span>
             </motion.div>

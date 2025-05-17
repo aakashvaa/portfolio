@@ -12,7 +12,7 @@ function ProjectSeven() {
                     y: 0,
                 }}
                 bg-white
-                className="flex z-50 flex-col justify-center item-center gap-y-5  relative mx-auto pt-2  w-2/3 rounded-md "
+                className="flex flex-col justify-center item-center gap-y-5  relative mx-auto pt-2  w-2/3 rounded-md "
             >
                 <div className="w-full pl-12 pr-4 py-4 bg-white/[0.03] border border-white/[0.05] rounded-xl focus:border-white/20 outline-none text-white/90 placeholder-white/40 transition-all duration-200 hover:border-white/10 flex justify-between items-center gap-5">
                     <p>

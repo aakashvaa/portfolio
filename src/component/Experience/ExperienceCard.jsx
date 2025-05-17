@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Briefcase, Calendar } from 'lucide-react'
 import { experiences } from '../../utils/constant'
-
-function ExperienceCard({ year, title, company, description, index }) {
+import { TechTag} from "../../Skill/TechTag.jsx"
+function ExperienceCard({ year, title, company, description, index, technologies }) {
     const [isHovered, setIsHovered] = useState(false)
 
     return (
@@ -72,23 +72,22 @@ function ExperienceCard({ year, title, company, description, index }) {
 
                 <motion.p className="text-white/50 tracking-wide mt-3 text-sm leading-relaxed">
                     {description.map((item, index) => (
-                        <motion.p
-                            style={{
-                                color: isHovered ? 'white/55' : 'white/50',
-                            }}
+                        <p
                             key={index}
-                            initial={{ scale: 1 }}
-                            animate={{
-                                scale: isHovered ? 1.005 : 1,
-                            }}
-                            transition={{
-                                ease: 'easeInOut',
-                            }}
+                        className={ isHovered ? 'text-white/70' : 'text-white/60'}
                         >
                             {item}
-                        </motion.p>
+                        </p>
                     ))}
-                </motion.p>
+                </motion.p> 
+                <div
+                    className="flex pt-4 flex-wrap gap-2.5 text-[5px]"
+                  
+                >
+                {technologies.map((tech, i) => (
+                        <TechTag key={i} name={tech.name} level={tech.level} />
+                    ))}
+            </div>
             </motion.div>
         </motion.div>
     )

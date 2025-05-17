@@ -37,10 +37,9 @@ function About() {
                 })}
             </div>
             <p className="text-[#f2e6f2ca]  font-abel sm:text-[1.12em] tracking-wider w-3/4 xs:text-justify text-start  xs:text-balance text-wrap">
-                I'm a versatile MERN full-stack developer with expertise in a
-                wide range of technologies, including the MERN stack (MongoDB,
-                Express.js, React, and Node.js). My skills extend beyond these
-                core tools, covering various databases, frameworks, and
+                I'm a versatile Frontend and Gen AI developer with expertise in a
+                wide range of technologies, including the React.js, Redux Toolkit, SCSS, Jest, Langchain, Google ADK, MCP etc. My skills extend beyond these
+                core tools, covering various databases, backend, frameworks, and
                 programming languages. I specialize in creating scalable,
                 high-performance web applications and enjoy solving complex
                 technical challenges. Collaboration and continuous learning are
@@ -51,7 +50,7 @@ function About() {
             </p>
 
             <motion.a
-                href="/Akash Verma.pdf"
+                href="https://drive.google.com/file/d/17wd-terxA756LuzER1YgwC-T6L9MKh2Z/view?usp=sharing"
                 target="_blank"
                 type="submit"
                 onHoverStart={() => setIsHovered(true)}

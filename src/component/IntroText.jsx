@@ -21,7 +21,7 @@ function IntroText({ text, i, isVisible, delay }) {
                     ease: 'easeInOut',
                 },
             }}
-            className="lg:text-[6em] md:text-[5em] sm:text-[4em] xs:text-[3em] text-[1.3em] font-bold xs:font-thin hoverText"
+            className="lg:text-[5em] md:text-[3.5em] sm:text-[2.5em] xs:text-[1.5em] text-[0.8em] font-bold xs:font-thin hoverText"
         >
             {text === ' ' ? '\u00A0' : text}
         </motion.h1>
