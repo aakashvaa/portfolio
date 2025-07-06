@@ -38,8 +38,9 @@ function MobileNavbar() {
             {toggleMenu && (
                 <NavbarContainer>
                     <ATag href="#top"> Top</ATag>
-                    <ATag href="#skills">Skills </ATag>
                     <ATag href="#about">About</ATag>
+                    <ATag href="#skills">Skills </ATag>
+                    <ATag href="#experience">Experience</ATag>
                     <ATag href="#project">Project</ATag>
                     <ATag href="#contact">Contact</ATag>
                     <hr className="  w-full blur-[1.5px] " />

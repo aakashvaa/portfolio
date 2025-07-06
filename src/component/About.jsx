@@ -37,8 +37,8 @@ function About() {
                 })}
             </div>
             <p className="text-[#f2e6f2ca]  font-abel sm:text-[1.12em] tracking-wider w-3/4 xs:text-justify text-start  xs:text-balance text-wrap">
-                I'm a versatile Frontend and Gen AI developer with expertise in a
-                wide range of technologies, including the React.js, Redux Toolkit, SCSS, Jest, Langchain, Google ADK, MCP etc. My skills extend beyond these
+                I'm a versatile Generative AI and Frontend Engineer with ~2 years of experience having expertise in a
+                wide range of technologies, including the React.js, Redux Toolkit, SCSS, Langchain, Google ADK, MCP etc. My skills extend beyond these
                 core tools, covering various databases, backend, frameworks, and
                 programming languages. I specialize in creating scalable,
                 high-performance web applications and enjoy solving complex

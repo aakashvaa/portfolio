@@ -42,7 +42,6 @@ function Navbar() {
                         }}
                     >
                         {[
-                            'skills',
                             'about',
                             'experience',
                             'skills',
