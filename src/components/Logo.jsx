@@ -1,0 +1,34 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import { pathVariants, svgVariants } from '@/utils/constant'
+
+export default function Logo() {
+    return (
+        <a
+            href="#top"
+            className="absolute hidden sm:flex top-10 right-10 cursor-pointer decoration-transparent"
+        >
+            <motion.svg
+                width="30"
+                height="20"
+                viewBox="0 0 85 97"
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ width: '100%', transformOrigin: '0%' }}
+                variants={svgVariants}
+                initial="hidden"
+                animate="visible"
+                className="drop-shadow-xl outline-none"
+                whileTap={{ x: [-2, 2] }}
+            >
+                <motion.path
+                    variants={pathVariants}
+                    initial="hidden"
+                    animate="visible"
+                    d="M42.5 0L84.5022 96.75H0.497768L42.5 0Z"
+                    fill="#ffffff"
+                />
+            </motion.svg>
+        </a>
+    )
+}
